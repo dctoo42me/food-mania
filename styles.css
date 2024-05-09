@@ -144,17 +144,16 @@ nav {
 .gallery-container {
     position: relative;
     width: 100%; /* Adjust width as needed */
-    /* max-width: 100%; */
-    overflow-x: hidden; /* Enable horizontal scrolling */
+    max-width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Enable horizontal scrolling */
     white-space: nowrap;
-    /* scroll-behavior: smooth; */
-    /* font-size: 0; */
-    /* scrollbar-width: none; */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
     }
 
     .gallery {
     height: 300px;
-    display: flex;
+    display: inline-flex;
     width: 100%;
     animation: scrollGallery 20s linear infinite;
     }
@@ -173,9 +172,9 @@ nav {
     }
 
     .gallery-item img {
-    width: 300px;
-    display: block;
-    height: 250px;
+        display: block;
+        width: 300px;
+        height: auto;
     }
 
     .description {
