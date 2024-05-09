@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Food Mania</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,87 +10,89 @@
     <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="wrapper">
+<!-- <div class="wrapper"> -->
     <header>
-    <div class="header">
-        <h1 class="logo">Food Mania</h1>
-        <nav>
-        <ul>
-            <!-- <li><a href="#home">Home</a></li> -->
-            <li class="nav"><a href="#menu">Menu</a></li>
-            <li class="nav"><a href="#find us">Find us</a></li>
-            <li class="btn"><a href="tel:+9562262146">Call Us</a></li>
-        </ul>
-        </nav>
-    </div>
+        <div class="header">
+            <h1 class="logo">Food Mania</h1>
+            <nav>
+            <ul>
+                <!-- <li><a href="#home">Home</a></li> -->
+                <li class="nav"><a href="#menu">Menu</a></li>
+                <li class="nav"><a href="#find us">Find us</a></li>
+                <li class="btn"><a href="tel:+9562262146">Call Us</a></li>
+            </ul>
+            </nav>
+        </div>
     </header>
 
     <section id="home" class="hero">
-    <div class="container selected">
-        <h2>Get your taco fix today!</h2>
-        <p>Experience the delicious flavors of Tampico style food and more.</p>
-        <a href="#" class="btn">View Menu</a>
-    </div>
+        <div class="container selected">
+            <h2>Get your taco fix today!</h2>
+            <p>Experience the delicious flavors of Tampico style food and more.</p>
+            <a href="#" class="btn">View Menu</a>
+        </div>
     </section>
 
     <section id="menu" class="menu">
-    <div class="container">
-        <h2>Check out our menu items</h2>
-        <p>Experience the delicious flavors of Tampico style food and more.</p>
-    </div>
-    <div class="gallery-container">
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="img/ceviche.jpg" alt="Image 1">
-                <div class="description">Description for Image 1</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/burger.jpg" alt="Image 2">
-                <div class="description">Description for Image 2</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/chknstrips.jpg" alt="Image 1">
-                <div class="description">Description for Image 1</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/muchroom_burger.jpg" alt="Image 2">
-                <div class="description">Description for Image 2</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/ceviche.jpg" alt="Image 1">
-                <div class="description">Description for Image 1</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/burger.jpg" alt="Image 2">
-                <div class="description">Description for Image 2</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/chknstrips.jpg" alt="Image 1">
-                <div class="description">Description for Image 1</div>
-            </div>
-            <div class="gallery-item">
-                <img src="img/muchroom_burger.jpg" alt="Image 2">
-                <div class="description">Description for Image 2</div>
-            </div>
-            <!-- Add more gallery items as needed -->
+        <div class="container menu">
+            <h2>Check out our menu items</h2>
+            <p>Experience the delicious flavors of Tampico style food and more.</p>
         </div>
-    </div>
-        
     </section>
 
-    <section id="map" class="map">
+    <section>
     <div>
-        <h2>Our Location</h2>
-        <p>Find us on the Map</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.3740503671524!2d-97.67422242423221!3d26.08670579509869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f83470a36206f%3A0xf3169a0fe2eccb9a!2sFood%20Mania%20Tampico%20Style!5e0!3m2!1sen!2sus!4v1714257451857!5m2!1sen!2sus" style="border:0; width: 100%; height: 450px; "allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="media-scroller"  id="gallery">
+            <div class="media-element" >
+                <img src="img/ceviche.jpg" alt="Image 1">
+                <p class="title">Short title</p>
+            </div>
+            <div class="media-element">
+                <img src="img/burger.jpg" alt="Image 2">
+                <p class="title">Short title</p>
+            </div>
+            <div class="media-element">
+                <img src="img/chknstrips.jpg" alt="Image 1">
+                <p class="title">Short title</p>
+            </div>
+            <div class="media-element">
+                <img src="img/muchroom_burger.jpg" alt="Image 2">
+                <p class="title">Short title</p>
+            </div>
+            <div class="media-element">
+                <img src="img/ceviche.jpg" alt="Image 1">
+                <p class="title">Short title</p>
+            </div>
+            <div class="media-element">
+                <img src="img/burger.jpg" alt="Image 2">
+                <p class="title">Short title</p>
+            </div>
+            <div class="media-element">
+                <img src="img/chknstrips.jpg" alt="Image 1">
+                <p class="title">Short title</p>
+            </div>
+            <div class="media-element">
+                <img src="img/muchroom_burger.jpg" alt="Image 2">
+                <p class="title">Short title</p>
+            </div>
+        </div>
     </div>
+    </section> 
+
+    <section id="map" class="map">
+        <div>
+            <h2>Our Location</h2>
+            <p>Find us on the Map</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.3740503671524!2d-97.67422242423221!3d26.08670579509869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f83470a36206f%3A0xf3169a0fe2eccb9a!2sFood%20Mania%20Tampico%20Style!5e0!3m2!1sen!2sus!4v1714257451857!5m2!1sen!2sus" style="border:0; width: 100%; height: 450px; "allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </section>
 
     <footer>
-    <div>
-        <p>&copy; 2024 Food Mania | San Benito, TX | All rights reserved</p>
-    </div>
+        <div>
+            <p>&copy; 2024 Food Mania | San Benito, TX | All rights reserved</p>
+        </div>
     </footer>
-</div>
+<!-- </div> -->
+<script src="script.js"></script>
 </body>
 </html>

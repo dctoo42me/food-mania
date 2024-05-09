@@ -1,23 +1,27 @@
-const galleryContainer = document.querySelector('.gallery-container');
+// Get the gallery element
+const gallery = document.getElementById('gallery');
+let isShiftPressed = false;
 
-let startX = 0;
-let scrollLeft = 0;
-let isScrolling = false;
-
-galleryContainer.addEventListener('touchstart', (e) => {
-    isScrolling = true;
-    startX = e.touches[0].clientX - galleryContainer.offsetLeft;
-    scrollLeft = galleryContainer.scrollLeft;
+// Add event listener for mouseover
+gallery.addEventListener('mouseover', function() {
+  // Set flag to indicate Shift key is pressed
+    isShiftPressed = true;
 });
 
-galleryContainer.addEventListener('touchmove', (e) => {
-    if (!isScrolling) return;
-    e.preventDefault();
-    const x = e.touches[0].clientX - galleryContainer.offsetLeft;
-    const walk = (x - startX) * 2; // Adjust scrolling speed
-    galleryContainer.scrollLeft = scrollLeft - walk;
+// Add event listener for mouseout
+gallery.addEventListener('mouseout', function() {
+  // Reset flag when mouse leaves the gallery
+    isShiftPressed = false;
 });
 
-galleryContainer.addEventListener('touchend', () => {
-    isScrolling = false;
+// Add event listener for mouse wheel
+gallery.addEventListener('wheel', function(event) {
+  // Check if the Shift key is pressed
+    if (isShiftPressed) {
+    // Prevent default scrolling behavior
+    event.preventDefault();
+
+    // Scroll the gallery horizontally based on the mouse wheel delta
+    gallery.scrollLeft += event.deltaY;
+}   
 });

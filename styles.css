@@ -8,7 +8,7 @@
 /* Global styles */
 body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -100,6 +100,14 @@ nav {
     padding: 100px 20px;
 }
 
+.container.menu {
+    padding: 2rem ;
+}
+
+p {
+    padding-left: .5rem;
+}
+
 /* Hero section styles */
 .hero {
     display: flex;
@@ -137,59 +145,36 @@ nav {
 
 .menu {
     background-color: rgb(119, 193, 7);
-    padding-bottom: 100px;
 }
 
 /* Gallery Styles */
-.gallery-container {
-    position: relative;
-    width: 100%; /* Adjust width as needed */
-    max-width: 100%;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Enable horizontal scrolling */
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
-    }
-
-    .gallery {
-    height: 300px;
-    display: inline-flex;
+.media-scroller {
+    color: #ffffff;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 25%;
     width: 100%;
-    animation: scrollGallery 20s linear infinite;
-    }
+    
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: auto;
+}
 
-    .gallery:hover {
-        /* animation-play-state: paused; */
-        scroll-behavior:smooth;
-        overflow-x: auto;
-    }
+.media-element {
+    padding: 1rem;
+    background:#2c2c2c;
+    border-radius: 4px;
+}
 
-    .gallery-item {
-    flex: 0 0 auto;
-    margin-right: 0; /* Space between images */
-    position: relative;
-    font-size: 16px;
-    }
+.media-element > img {
+    inline-size: 100%;
+    aspect-ratio:16 / 9; /*4 /3 (another option)*/
+    object-fit: cover;
+}
 
-    .gallery-item img {
-        display: block;
-        width: 300px;
-        height: auto;
-    }
-
-    .description {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 12px; /*Add padding for spacing */
-    background-color: rgb(255, 255, 255);
+.media-element > p {
     text-align: center;
-    }
-
-    @keyframes scrollGallery {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-100% - 20px)); }
 }
 
 div.selected {
@@ -203,7 +188,7 @@ div.selected {
 .map {
     background-color: #979797;
     display: flex;
-    padding: 10px 20px;
+    padding: 2rem;
     color: #333;
     width: 100% !important;
     color: #fff;
@@ -216,8 +201,8 @@ div.selected {
     width: 100%;
 }
 
-p {
-    padding-bottom: 10px;
+.map p {
+    padding-bottom: 2rem;
 }
 
 /* Footer styles */
