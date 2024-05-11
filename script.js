@@ -25,3 +25,35 @@ gallery.addEventListener('wheel', function(event) {
     gallery.scrollLeft += event.deltaY;
 }   
 });
+
+// Get gallery elements
+// const gallery = document.getElementById('gallery');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+// Attach event listener to each media element
+const mediaElements = gallery.querySelectorAll('.media-element');
+mediaElements.forEach(mediaElement => {
+    mediaElement.addEventListener('click', function() {
+        // Get the clicked image source
+        const imgSrc = this.querySelector('img').src;
+        
+        // Display the lightbox with the clicked image
+        lightboxImg.src = imgSrc;
+        lightbox.style.display = 'flex';
+    });
+});
+
+// Close the lightbox when the close button is clicked
+const closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', function() {
+    lightbox.style.display = 'none';
+});
+
+// Close the lightbox when the user clicks outside of it
+window.addEventListener('click', function(event) {
+    if (event.target === lightbox) {
+        lightbox.style.display = 'none';
+    }
+});
+

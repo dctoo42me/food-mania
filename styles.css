@@ -10,20 +10,31 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     background-color: #3a3a3a;
 }
 
+.app-wrapper {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+}
+
 .logo {
     font-family: Gluten;
-    color: #fff;
     line-height: normal;
     font-weight: 600;
     font-size: 46px;
     margin-right: 20px;
     float: left;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #fff;
 }
 
 nav ul {
@@ -45,6 +56,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-weight: 600;
 }
 
 .nav a:hover {
@@ -59,13 +71,13 @@ nav {
     text-decoration: none;
     font-weight: 600;
     line-height: normal;
-    transition: background-color 0.8s ease;
+    transition: background-color 0.4s ease;
     box-shadow: 1px 1px 10px rgba(60, 60, 60, 0.831); /* Button shadow */
 }
 
 .btn:hover {
-    background-color:rgba(80, 138, 80, 0.7);
-    color: #353535;
+    background-color:rgb(122, 123, 122);
+    cursor: pointer;
 }
 
 .btn:active {
@@ -73,28 +85,28 @@ nav {
 
 }
 
-.wrapper {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-}
-
 /* Header styles */
-
-.header {
+header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-    
-    header {
-        background-color: #e62321;
-        padding: 15px 0;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left:auto;
+    background-color: #e62321;
 }
 
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
 
 .container {
     padding: 100px 20px;
@@ -114,14 +126,22 @@ p {
     flex-direction: column;
     justify-content: center;
     position: relative;
-    background-image: url(img/taquitos.jpg);
+    background-image: url(img/taquitosPlate2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
     height: 500px;
+    margin-top: 70px;
 }
 
-.hero h2 {
+.hero img {
+    image-rendering: center;
+    width: 100vw;
+    height: auto;
+}
+
+.hero h2, .menu h2 {
     font-size: 42px;
     color: #2b2b2b;
 }
@@ -143,44 +163,73 @@ p {
     /* Ensure pseudo-element is behind text */
 }
 
-.menu {
-    background-color: rgb(119, 193, 7);
+.media {
+    background-color: rgba(119, 193, 7,.75);
+    padding: 2rem
+}
+
+.media h3, .media p {
+    /* color: #2b2b2b; */
+    color: #ffffff;
 }
 
 /* Gallery Styles */
+.media-wrapper {
+    background-image: url("img/background2.svg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .media-scroller {
-    color: #ffffff;
     display: grid;
     gap: 1rem;
     grid-auto-flow: column;
-    grid-auto-columns: 25%;
-    width: 100%;
+    grid-auto-columns: 50%;
+    
+    padding: 0 1rem 3rem;
+    background-color: rgba(119, 193, 7,.8);
+
     
     overflow-x: auto;
     overflow-y: hidden;
-    overscroll-behavior-inline: auto;
+    overscroll-behavior-inline: contain;
+    /* scrollbar-width: none; */
+    scroll-behavior: auto;
 }
 
 .media-element {
+    display: grid;
+    grid-template-rows: min-content;
     padding: 1rem;
-    background:#2c2c2c;
-    border-radius: 4px;
+    /* background:rgba(223, 241, 197, 0.694); */
+    background:rgba(255, 255, 255, 0.694);
+    /* background:#dcdbdb; */
+    color: #403f3f;
+    border-radius: 4px 6px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 20px; */
 }
 
 .media-element > img {
     inline-size: 100%;
-    aspect-ratio:16 / 9; /*4 /3 (another option)*/
+    aspect-ratio:4/3; /*16/9 (another option)*/
     object-fit: cover;
+}
+
+.media-element:hover {
+    cursor: pointer;
 }
 
 .media-element > p {
     text-align: center;
+    padding-top: 1rem;
 }
+
+/* general styling */
 
 div.selected {
     position: relative;
     color: #161515;
-    /* font-size: 36px; */
     margin-bottom: 20px;
     z-index: 2;
 }
@@ -190,7 +239,7 @@ div.selected {
     display: flex;
     padding: 2rem;
     color: #333;
-    width: 100% !important;
+    width: 100%;
     color: #fff;
     flex-direction: row;
     justify-content: center;
@@ -218,17 +267,191 @@ footer {
     text-align: center;
 }
 
-/* Desktop screens (min-width: 1024px) */
-@media only screen and (min-width: 1024px) {
-    /* Add desktop-specific styles here */
+/* CSS for lightbox */
+.lightbox {
+    display:none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;   
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Tablet screens (min-width: 768px) and (max-width: 1023px) */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-/* Add tablet-specific styles here */
+.lightbox-img {
+    /* display: block; */
+    /* margin: auto; */
+    max-width: 80%;
+    max-height: 80%;
 }
 
-/* Mobile screens (max-width: 767px) */
-@media only screen and (max-width: 767px) {
-/* Add mobile-specific styles here */
+.close {
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* menu styles */
+/* Styles for menu section */
+.menu {
+    background-image: url("img/background2.svg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+}
+
+.menu-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #dad7d789;
+}
+
+.menu h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.menu-item {
+    background-color: #ffffff;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.menu-item .description {
+    color: #777;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: #333;
+}
+
+.description {
+    padding-top: .5rem;
+    text-align: left;
+}
+
+.price {
+    padding-bottom: .5rem;
+}
+
+.menu-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 605px){
+	/*Small smartphones [600 -> below]*/
+        .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .logo {
+        margin-right: 0;
+        }
+
+        .hero {
+            margin-top: 120px;
+        }
+
+        .menu {
+            padding: 0;
+        }
+
+        .menu-item {
+            margin: 0;
+        }
+
+        .menu-item h3 {
+            font-size: 1rem;
+        }
+
+        .menu-item p {
+            font-size: .75rem;
+        }
+
+        .container.menu-wrapper {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+        .media-element {
+            display: grid;
+            grid-template-rows: min-content;
+            padding: .75rem;
+        }
+        
+        .media-element > p {
+            text-align: center;
+            padding-top: .5rem;
+            font-size: 14px;
+        }
+}
+@media only screen and (max-width: 430px){
+    /*Small smartphones [430 -> below]*/
+    */
+    
+    .logo {
+        font-size: 36px;
+        padding: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 30px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    .media-scroller {
+        grid-auto-columns: 75%;
+    }
+    
+}
+@media only screen and (max-width: 320px){
+    .logo {
+        font-size: 30px;
+        padding: 1rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: .5rem 0;
+    }
+
+    .hero {
+        margin-top: 235px;
+    }
 }
