@@ -1,7 +1,3 @@
-// Get the lightbox and lightbox image elements
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-
 // Get the gallery element
 const gallery = document.getElementById('gallery');
 let isShiftPressed = false;
