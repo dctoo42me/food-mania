@@ -61,7 +61,7 @@ window.addEventListener('click', function(event) {
 // Add event listener for touch events on the window
 window.addEventListener('touchstart', function(event) {
     // Check if the touch event target is not inside the lightbox
-    if (!lightbox.contains(event.target)) {
+    if (!lightbox.img.contains(event.target)) {
         // Close the lightbox
         lightbox.style.display = 'none';
     }
