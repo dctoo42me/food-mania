@@ -1,3 +1,7 @@
+// Get the lightbox and lightbox image elements
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
 // Get the gallery element
 const gallery = document.getElementById('gallery');
 let isShiftPressed = false;
@@ -58,15 +62,14 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// Add event listener for touch events on the window
-window.addEventListener('touchstart', function(event) {
-    // Check if the touch event target is not inside the lightbox
-    if (!lightbox.img.contains(event.target)) {
-        // Close the lightbox
+// Add event listener to the document body for touch events
+document.body.addEventListener('touchstart', function(event) {
+    // Check if the touch event target is outside of the lightbox image
+    if (!lightboxImg.contains(event.target)) {
+        // If outside, close the lightbox
         lightbox.style.display = 'none';
     }
 });
-
 
 
 // Nav hamburger menu interaction
