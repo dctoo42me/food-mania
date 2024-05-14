@@ -27,6 +27,7 @@ gallery.addEventListener('wheel', function(event) {
 });
 
 // Get gallery elements
+
 // const gallery = document.getElementById('gallery');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
@@ -57,3 +58,59 @@ window.addEventListener('click', function(event) {
     }
 });
 
+
+// Nav hamburger menu interaction
+function toggleMenu() {
+    const hamburger = document.querySelector('.hamburger-menu');
+    hamburger.classList.toggle('active');
+}
+
+
+// Close the lightbox when the user clicks outside of it
+window.addEventListener('click', function(event) {
+    if (event.target === lightbox) {
+        lightbox.style.display = 'none';
+    }
+});
+
+// Function to toggle the display of hamburger menu and navigation menu
+function toggleMenuDisplay() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mainMenu = document.querySelector('.main-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    // Check the window width and toggle the display accordingly
+    if (window.innerWidth <= 605) {
+        hamburgerMenu.style.display = 'flex';
+        mainMenu.style.display = 'none';
+    } else {
+        mainMenu.style.display = 'block';
+        mobileMenu.style.display = 'none';
+        hamburgerMenu.style.display = 'none';
+        hamburgerMenu.classList.remove('active');
+         // Ensure navigation menu is hidden on resize
+    }
+}
+
+// Call the function initially to set the initial display state
+toggleMenuDisplay();
+
+// Add event listener for window resize events
+window.addEventListener('resize', toggleMenuDisplay);
+
+// Toggle menu on window resize
+window.addEventListener('resize', function() {
+    const menu = document.getElementById('main-menu');
+    if (window.innerWidth > 605) {
+        menu.classList.remove('active');
+    }
+});
+
+// Toggle mobile menu when hamburger menu is clicked
+function toggleMenu() {
+    const menu = document.querySelector('.main-menu');
+    menu.classList.toggle('active');
+    
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.classList.toggle('active'); // Toggle the mobile menu
+}

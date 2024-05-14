@@ -10,233 +10,242 @@
     <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="app-wrapper">
-    <!-- <div class="wrapper"> -->
-    <header>
-        <div class="header">
-            <h1 class="logo"><a href="#home" class="logo-link">Food Mania</a></h1>
-            <!-- Hamburger menu icon -->
-            <div class="hamburger-menu" onclick="toggleMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+    <div class="app-wrapper">
+        <!-- <div class="wrapper"> -->
+        <header>
+            <div class="header">
+                <h1 class="logo"><a href="#home" class="logo-link">Food Mania</a></h1>
+                <!-- Hamburger menu icon -->
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <!-- Navigation menu -->
+                <nav class="main-menu">
+                    <ul>
+                        <li class="nav"><a href="#menu">MENU</a></li>
+                        <li class="nav"><a href="#location">LOCATION</a></li>
+                        <li class="nav"><a href="#contact">CONTACT</a></li>
+                        <li class="btn"><a href="tel:+19562262146">CALL</a></li>
+                    </ul>
+                </nav>
+                <!--Mobile Navigation menu -->
+                <nav class="mobile-menu">
+                    <div class="close-btn" onclick="toggleMenu()">X</div>
+                    <ul>
+                        <li class="nav" onclick="toggleMenu()"><a href="#menu">MENU</a></li>
+                        <li class="nav" onclick="toggleMenu()"><a href="#location">LOCATION</a></li>
+                        <li class="nav" onclick="toggleMenu()"><a href="#contact">CONTACT</a></li>
+                        <li class="btn" onclick="toggleMenu()"><a href="tel:+19562262146">CALL US</a></li>
+                    </ul>
+                </nav>
             </div>
-            <!-- Navigation menu -->
-            <nav id="main-menu">
-                <ul>
-                    <li class="nav"><a href="#menu">Menu</a></li>
-                    <li class="nav"><a href="#location">Location</a></li>
-                    <li class="nav"><a href="#contact">Contact</a></li>
-                    <li class="btn"><a href="tel:+19562262146">Call Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <section id="home" class="hero">
-        <div class="container selected">
-            <h2>GET YOUR TACO FIX TODAY!</h2>
-            <p>Experience the delicious flavors of Tampico style food and more.</p>
-            <a href="#menu" class="btn">View Menu</a>
+        <section id="home" class="hero">
+            <div class="container selected">
+                <h2>GET YOUR TACO FIX TODAY!</h2>
+                <p>Experience the delicious flavors of Tampico style food and more.</p>
+                <a href="#menu" class="btn">View Menu</a>
+            </div>
+        </section>
+            
+        <section class="media-wrapper">
+            <div class="media">
+                <h3>CHECK OUT OUR MENU ITEMS</h3>
+                <p>We cater to parties and events of all sizes</p>
+            </div>
+            <div id="gallery" class="media-scroller" >
+                <div class="media-element" >
+                    <img src="img/taquitos.jpg" alt="Image 1">
+                    <p class="title">Tacos de Bistec</p>
+                </div>
+                <div class="media-element" >
+                    <img src="img/torta.jpg" alt="Image 1">
+                    <p class="title">Tortas</p>
+                </div>
+                <div class="media-element">
+                    <img src="img/faj_quesadillas.jpg" alt="Image 2">
+                    <p class="title">Fajita Quesadillas</p>
+                </div>
+                <div class="media-element">
+                    <img src="img/tacos_yummy.jpg" alt="Image 3">
+                    <p class="title">Street Tacos</p>
+                </div>
+                <div class="media-element">
+                    <img src="img/tacos.jpg" alt="Image 4">
+                    <p class="title">Mas Tacos!</p>
+                </div>
+                <div class="media-element">
+                    <img src="img/ceviche.jpg" alt="Image 5">
+                    <p class="title">Ceviche</p>
+                </div>
+                <div class="media-element">
+                    <img src="img/burger.jpg" alt="Image 6">
+                    <p class="title">Angus Burger</p>
+                </div>
+                <div class="media-element">
+                    <img src="img/chknstrips.jpg" alt="Image 7">
+                    <p class="title">Chicken Strips</p>
+                </div>
+                <div class="media-element">
+                    <img src="img/philly.jpg" alt="Image 8">
+                    <p class="title">Philly Cheesesteak</p>
+                </div>
+                <div class="media-element">
+                    <img src="img/hotdog.jpg" alt="Image 9">
+                    <p class="title">Jumbo Hotdog</p>
+                </div>
+                <div class="media-element">
+                    <img src="img/cheeseFries.jpg" alt="Image 10">
+                    <p class="title">Cheese Fries</p>
+                </div>
+                <div class="media-element">
+                    <img src="img/muchroom_burger.jpg" alt="Image 11">
+                    <p class="title">Mushroom Burger</p>
+                </div>
+            </div>
+        </section> 
+        <!-- Lightbox HTML structure -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img id="lightbox-img" class="lightbox-img">
         </div>
-    </section>
-        
-    <section class="media-wrapper">
-        <div class="media">
-            <h3>CHECK OUT OUR MENU ITEMS</h3>
-            <p>We cater to parties and events of all sizes</p>
-        </div>
-        <div id="gallery" class="media-scroller" >
-            <div class="media-element" >
-                <img src="img/taquitos.jpg" alt="Image 1">
-                <p class="title">Tacos de Bistec</p>
+
+        <section id="menu" class="menu">
+            <div class="container menu-wrapper">
+                <h2>Menu</h2>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Tacos de Bistec or Pastor</h3>
+                        <p class="price">$1.69</p>
+                    </div>
+                    <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Orden de Tacos (Order of Tacos)</h3>
+                        <p class="price">$9.99</p>
+                    </div>
+                    <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Tortas de Bistec or Pastor</h3>
+                        <p class="price">$8.25</p>
+                    </div>
+                    <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Gringa or Pirata</h3>
+                        <p class="price">$8.25</p>
+                    </div>
+                    <p class="description">Large fluor tortilla, melted cheese, and grilled onions (Bistec or Pastor)</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Fajita Quesadillas & Fries</h3>
+                        <p class="price">$12.50</p>
+                    </div>
+                    <p class="description">Large fluor tortilla, fajita, melted cheese, lettuce and tomato al lado (on the side)</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Philly Cheesesteak & Fries</h3>
+                        <p class="price">$12.50</p>
+                    </div>
+                    <p class="description">Sirloin meat, bell pepper, grilled onion, mozzarella cheese</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Bacon Cheeseburger & Fries</h3>
+                        <p class="price">$10.75</p>
+                    </div>
+                    <p class="description">Lettuce, tomato, onions, and pickles</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Angus Mushroom Burger & Fries</h3>
+                        <p class="price">$12.00</p>
+                    </div>
+                    <p class="description">Mushrooms, grilled onions, pickles, mozzarella cheese, lettuce, tomato</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Mexican Burger & Fries</h3>
+                        <p class="price">$10.75</p>
+                    </div>
+                    <p class="description">Grilled Ham, avocado, pickles, cheese, lettuce, potato, onions</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Chicken Strips & Fries</h3>
+                        <p class="price">$8.75</p>
+                    </div>
+                    <p class="description">Three (3) Chicken Tenders & fries</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title-wrapper">
+                        <h3>Jumbo Hotdog</h3>
+                        <p class="price">$8.99</p>
+                    </div>
+                    <p class="description">Served with tomato, grilled onions, and fries</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Drinks</h3>
+                    <div class="menu-title-wrapper group">
+                        <div class="menu-title-wrapper">
+                            <p class="description">Coca Lata (Canned Coke)</p>
+                            <p class="price">$1.50</p>
+                        </div>
+                        <div class="menu-title-wrapper">
+                            <p class="description">Coca Mexicana</p>
+                            <p class="price">$3.50</p>
+                        </div>
+                        <div class="menu-title-wrapper">
+                            <p class="description">Botella de Agua (Bottled Water)</p>
+                            <p class="price">$1.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <h3>Sides</h3>
+                    <div class="menu-title-wrapper group">
+                        <div class="menu-title-wrapper">
+                            <p class="description">Charro Beans</p>
+                            <p class="price">$2.25</p>
+                        </div>
+                        <div class="menu-title-wrapper">
+                            <p class="description">Salsa, Ketchup, Mayo</p>
+                            <p class="price">$0.25 ea</p>
+                        </div>
+                        <div class="menu-title-wrapper">
+                            <p class="description">Jalapeno, BBQ, Ranch</p>
+                            <p class="price">$0.50 ea</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more menu items as needed -->
             </div>
-            <div class="media-element" >
-                <img src="img/torta.jpg" alt="Image 1">
-                <p class="title">Tortas</p>
+        </section>
+
+        <section class="map">
+            <div id="location" >
+                <h3>OUR LOCATION</h3>
+                <p>Find us on the Map</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.3740503671524!2d-97.67422242423221!3d26.08670579509869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f83470a36206f%3A0xf3169a0fe2eccb9a!2sFood%20Mania%20Tampico%20Style!5e0!3m2!1sen!2sus!4v1714257451857!5m2!1sen!2sus" style="border:0; width: 100%; height: 450px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
             </div>
-            <div class="media-element">
-                <img src="img/faj_quesadillas.jpg" alt="Image 2">
-                <p class="title">Fajita Quesadillas</p>
+        </section>
+
+        <footer>
+            <div>
+                <p>&copy; 2024 Food Mania | San Benito, TX | All rights reserved</p>
             </div>
-            <div class="media-element">
-                <img src="img/tacos_yummy.jpg" alt="Image 3">
-                <p class="title">Street Tacos</p>
-            </div>
-            <div class="media-element">
-                <img src="img/tacos.jpg" alt="Image 4">
-                <p class="title">Mas Tacos!</p>
-            </div>
-            <div class="media-element">
-                <img src="img/ceviche.jpg" alt="Image 5">
-                <p class="title">Ceviche</p>
-            </div>
-            <div class="media-element">
-                <img src="img/burger.jpg" alt="Image 6">
-                <p class="title">Angus Burger</p>
-            </div>
-            <div class="media-element">
-                <img src="img/chknstrips.jpg" alt="Image 7">
-                <p class="title">Chicken Strips</p>
-            </div>
-            <div class="media-element">
-                <img src="img/philly.jpg" alt="Image 8">
-                <p class="title">Philly Cheesesteak</p>
-            </div>
-            <div class="media-element">
-                <img src="img/hotdog.jpg" alt="Image 9">
-                <p class="title">Jumbo Hotdog</p>
-            </div>
-            <div class="media-element">
-                <img src="img/cheeseFries.jpg" alt="Image 10">
-                <p class="title">Cheese Fries</p>
-            </div>
-            <div class="media-element">
-                <img src="img/muchroom_burger.jpg" alt="Image 11">
-                <p class="title">Mushroom Burger</p>
-            </div>
-        </div>
-    </section> 
-    <!-- Lightbox HTML structure -->
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img id="lightbox-img" class="lightbox-img">
+        </footer>
     </div>
-
-    <section id="menu" class="menu">
-        <div class="container menu-wrapper">
-            <h2>Menu</h2>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Tacos de Bistec or Pastor</h3>
-                    <p class="price">$1.69</p>
-                </div>
-                <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Orden de Tacos (Order of Tacos)</h3>
-                    <p class="price">$9.99</p>
-                </div>
-                <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Tortas de Bistec or Pastor</h3>
-                    <p class="price">$8.25</p>
-                </div>
-                <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Gringa or Pirata</h3>
-                    <p class="price">$8.25</p>
-                </div>
-                <p class="description">Large fluor tortilla, melted cheese, and grilled onions (Bistec or Pastor)</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Fajita Quesadillas & Fries</h3>
-                    <p class="price">$12.50</p>
-                </div>
-                <p class="description">Large fluor tortilla, fajita, melted cheese, lettuce and tomato al lado (on the side)</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Philly Cheesesteak & Fries</h3>
-                    <p class="price">$12.50</p>
-                </div>
-                <p class="description">Sirloin meat, bell pepper, grilled onion, mozzarella cheese</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Bacon Cheeseburger & Fries</h3>
-                    <p class="price">$10.75</p>
-                </div>
-                <p class="description">Lettuce, tomato, onions, and pickles</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Angus Mushroom Burger & Fries</h3>
-                    <p class="price">$12.00</p>
-                </div>
-                <p class="description">Mushrooms, grilled onions, pickles, mozzarella cheese, lettuce, tomato</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Mexican Burger & Fries</h3>
-                    <p class="price">$10.75</p>
-                </div>
-                <p class="description">Grilled Ham, avocado, pickles, cheese, lettuce, potato, onions</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Chicken Strips & Fries</h3>
-                    <p class="price">$8.75</p>
-                </div>
-                <p class="description">Three (3) Chicken Tenders & fries</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-title-wrapper">
-                    <h3>Jumbo Hotdog</h3>
-                    <p class="price">$8.99</p>
-                </div>
-                <p class="description">Served with tomato, grilled onions, and fries</p>
-            </div>
-            <div class="menu-item">
-                <h3>Drinks</h3>
-                <div class="menu-title-wrapper group">
-                    <div class="menu-title-wrapper">
-                        <p class="description">Coca Lata (Canned Coke)</p>
-                        <p class="price">$1.50</p>
-                    </div>
-                    <div class="menu-title-wrapper">
-                        <p class="description">Coca Mexicana</p>
-                        <p class="price">$3.50</p>
-                    </div>
-                    <div class="menu-title-wrapper">
-                        <p class="description">Botella de Agua (Bottled Water)</p>
-                        <p class="price">$1.00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <h3>Sides</h3>
-                <div class="menu-title-wrapper group">
-                    <div class="menu-title-wrapper">
-                        <p class="description">Charro Beans</p>
-                        <p class="price">$2.25</p>
-                    </div>
-                    <div class="menu-title-wrapper">
-                        <p class="description">Salsa, Ketchup, Mayo</p>
-                        <p class="price">$0.25 ea</p>
-                    </div>
-                    <div class="menu-title-wrapper">
-                        <p class="description">Jalapeno, BBQ, Ranch</p>
-                        <p class="price">$0.50 ea</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more menu items as needed -->
-        </div>
-    </section>
-
-    <section class="map">
-        <div id="location" >
-            <h3>OUR LOCATION</h3>
-            <p>Find us on the Map</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.3740503671524!2d-97.67422242423221!3d26.08670579509869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866f83470a36206f%3A0xf3169a0fe2eccb9a!2sFood%20Mania%20Tampico%20Style!5e0!3m2!1sen!2sus!4v1714257451857!5m2!1sen!2sus" style="border:0; width: 100%; height: 450px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <footer>
-        <div>
-            <p>&copy; 2024 Food Mania | San Benito, TX | All rights reserved</p>
-        </div>
-    </footer>
-    <!-- </div> -->
-    <script src="script.js"></script>
-</div>
+<script src="script.js" defer></script>
 </body>
 
 </html>
