@@ -178,7 +178,7 @@ nav {
 }
 
 .btn {
-    padding: 10px 20px;
+    padding: 8px 20px;
     border-radius: 40px;
     color:#ffffff;
     background-color: rgb(119, 193, 7);
@@ -190,7 +190,7 @@ nav {
 }
 
 .btn:hover {
-    background-color:rgb(122, 123, 122);
+    background-color: rgba(119, 193, 7, 0.599);
     cursor: pointer;
 }
 
@@ -236,6 +236,12 @@ p {
 }
 
 /* Hero section styles */
+
+.spacer {
+    width: 100%;
+    margin-top: 73px;
+}
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -247,7 +253,6 @@ p {
     background-position: center;
     text-align: center;
     height: 500px;
-    margin-top: 70px;
 }
 
 .hero img {
@@ -323,6 +328,7 @@ p {
     color: #403f3f;
     border-radius: 4px 6px;
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 20px; */
+    transition: opacity .3s;
 }
 
 .media-element > img {
@@ -333,6 +339,7 @@ p {
 
 .media-element:hover {
     cursor: pointer;
+    opacity: .7;
 }
 
 .media-element > p {
@@ -347,39 +354,6 @@ div.selected {
     color: #161515;
     margin-bottom: 20px;
     z-index: 2;
-}
-
-.map {
-    background-color: #979797;
-    display: flex;
-    padding: 2rem;
-    color: #333;
-    width: 100%;
-    color: #fff;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.map div {
-    width: 100%;
-}
-
-.map p {
-    padding-bottom: 2rem;
-}
-
-/* Footer styles */
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #333;
-    color: #fff;
-    width: 100%;
-    height: 60px;
-    padding: 40px 20px;
-    text-align: center;
 }
 
 /* CSS for lightbox */
@@ -414,6 +388,13 @@ footer {
     cursor: pointer;
 }
 
+.close:hover {
+    opacity: .6;
+}
+
+.close:active {
+    opacity: 1;
+}
 /* menu styles */
 /* Styles for menu section */
 .menu {
@@ -476,6 +457,39 @@ footer {
     flex-direction: column;
 }
 
+.map {
+    background-color: #979797;
+    display: flex;
+    padding: 2rem;
+    color: #333;
+    width: 100%;
+    color: #fff;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.map div {
+    width: 100%;
+}
+
+.map p {
+    padding-bottom: 2rem;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
 
 @media only screen and (max-width: 730px){
     /*Tablets [700 -> below]*/
@@ -487,8 +501,8 @@ footer {
     }
 }
 @media only screen and (max-width: 605px){
-	/*Small smartphones [605 -> below]*/
-
+    /*Small smartphones [605 -> below]*/
+    
     .header {
     display: flex;
     flex-direction: column;

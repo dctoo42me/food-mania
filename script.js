@@ -58,6 +58,16 @@ window.addEventListener('click', function(event) {
     }
 });
 
+// Add event listener for touch events on the window
+window.addEventListener('touchstart', function(event) {
+    // Check if the touch event target is not inside the lightbox
+    if (!lightbox.contains(event.target)) {
+        // Close the lightbox
+        lightbox.style.display = 'none';
+    }
+});
+
+
 
 // Nav hamburger menu interaction
 function toggleMenu() {
@@ -114,3 +124,16 @@ function toggleMenu() {
     const mobileMenu = document.querySelector('.mobile-menu');
     mobileMenu.classList.toggle('active'); // Toggle the mobile menu
 }
+
+//Scrolls to top of page
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.querySelector('.logo-link');
+
+    logo.addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
