@@ -111,8 +111,8 @@ window.addEventListener('resize', function() {
 
 // Toggle mobile menu when hamburger menu is clicked
 function toggleMenu() {
-    const menu = document.querySelector('.main-menu');
-    menu.classList.toggle('active');
+    // const menu = document.querySelector('.main-menu');
+    // menu.classList.toggle('active');
     
     const mobileMenu = document.querySelector('.mobile-menu');
     mobileMenu.classList.toggle('active'); // Toggle the mobile menu
