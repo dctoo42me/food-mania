@@ -101,14 +101,6 @@ toggleMenuDisplay();
 // Add event listener for window resize events
 window.addEventListener('resize', toggleMenuDisplay);
 
-// Toggle menu on window resize
-window.addEventListener('resize', function() {
-    const menu = document.getElementById('main-menu');
-    if (window.innerWidth > 605) {
-        menu.classList.remove('active');
-    }
-});
-
 // Toggle mobile menu when hamburger menu is clicked
 function toggleMenu() {
     // const menu = document.querySelector('.main-menu');
