@@ -1,19 +1,22 @@
-// Get the gallery element
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
 const gallery = document.getElementById('gallery');
-let isShiftPressed = false;
+const mediaElements = gallery.querySelectorAll('.media-element');
+const closeButton = document.querySelector('.close');
+const lightboxOverlay = document.querySelector('.lightbox-overlay');
 
+
+let isShiftPressed = false;
 // Add event listener for mouseover
 gallery.addEventListener('mouseover', function() {
   // Set flag to indicate Shift key is pressed
     isShiftPressed = true;
 });
-
 // Add event listener for mouseout
 gallery.addEventListener('mouseout', function() {
   // Reset flag when mouse leaves the gallery
     isShiftPressed = false;
 });
-
 // Add event listener for mouse wheel
 gallery.addEventListener('wheel', function(event) {
   // Check if the Shift key is pressed
@@ -26,61 +29,45 @@ gallery.addEventListener('wheel', function(event) {
 }   
 });
 
-// Get gallery elements
-
-// const gallery = document.getElementById('gallery');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-
+// Get the lightbox and lightbox image elements
 // Attach event listener to each media element
-const mediaElements = gallery.querySelectorAll('.media-element');
 mediaElements.forEach(mediaElement => {
     mediaElement.addEventListener('click', function() {
         // Get the clicked image source
         const imgSrc = this.querySelector('img').src;
-        
-        // Display the lightbox with the clicked image
         lightboxImg.src = imgSrc;
+        // Display the lightbox with the clicked image
         lightbox.style.display = 'flex';
+        lightboxOverlay.classList.add('lightbox-open');
+        // Prevent scrolling
+        document.body.style.overflow = 'hidden'; 
     });
 });
 
 // Close the lightbox when the close button is clicked
-const closeButton = document.querySelector('.close');
 closeButton.addEventListener('click', function() {
     lightbox.style.display = 'none';
+    lightboxOverlay.classList.remove('lightbox-open');
+    // Restore scrolling
+    document.body.style.overflow = ''; 
 });
+
+
 
 // Close the lightbox when the user clicks outside of it
 window.addEventListener('click', function(event) {
     if (event.target === lightbox) {
         lightbox.style.display = 'none';
+        lightboxOverlay.classList.remove('lightbox-open');
+        document.body.style.overflow = ''; // Restore scrolling
     }
 });
-
-// Add event listener to the document body for touch events
-document.body.addEventListener('touchstart', function(event) {
-    // Check if the touch event target is outside of the lightbox image
-    if (!lightboxImg.contains(event.target)) {
-        // If outside, close the lightbox
-        lightbox.style.display = 'none';
-    }
-});
-
 
 // Nav hamburger menu interaction
 function toggleMenu() {
     const hamburger = document.querySelector('.hamburger-menu');
     hamburger.classList.toggle('active');
 }
-
-
-// Close the lightbox when the user clicks outside of it
-window.addEventListener('click', function(event) {
-    if (event.target === lightbox) {
-        lightbox.style.display = 'none';
-    }
-});
 
 // Function to toggle the display of hamburger menu and navigation menu
 function toggleMenuDisplay() {

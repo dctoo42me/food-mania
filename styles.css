@@ -395,6 +395,24 @@ div.selected {
 .close:active {
     opacity: 1;
 }
+
+/* CSS for semi-transparent background overlay */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 9998; /* Ensure it's behind the lightbox but above other content */
+    display: none; /* Initially hidden */
+}
+
+/* CSS to prevent pointer events on elements behind the lightbox */
+.lightbox-open {
+    pointer-events: none;
+}
+
 /* menu styles */
 /* Styles for menu section */
 .menu {
