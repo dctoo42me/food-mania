@@ -55,7 +55,7 @@ closeButton.addEventListener('click', function() {
 // Add event listener to the document body for touch events
 document.body.addEventListener('touchstart', function(event) {
     // Check if the touch event target is outside of the lightbox image
-    if (!lightboxImg.contains(event.target)) {
+    if (lightbox.contains(event.target)) {
         // If outside, close the lightbox
         lightbox.style.display = 'none';
     }
