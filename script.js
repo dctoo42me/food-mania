@@ -58,6 +58,8 @@ document.body.addEventListener('touchstart', function(event) {
     if (lightbox.contains(event.target)) {
         // If outside, close the lightbox
         lightbox.style.display = 'none';
+        lightboxOverlay.classList.remove('lightbox-open');
+        document.body.style.overflow = ''; // Restore scrolling
     }
 });
 
