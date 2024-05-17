@@ -595,8 +595,8 @@ footer {
     
     /* add nav offset padding on anchor links*/
     a[href="#menu"],
-    a[href="location"],
-    a[href="contact"] {
+    a[href="#location"],
+    a[href="#contact"] {
         /* add padding */
         padding-top: 108px
     }
@@ -606,9 +606,9 @@ footer {
     .logo {
         font-size: 30px;
     }
-
+/* 
     .hero {
         margin-top: 120px;
-    }
+    } */
 
 } 
