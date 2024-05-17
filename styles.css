@@ -508,6 +508,15 @@ footer {
     text-align: center;
 }
 
+/* add top margin to offset anchor tags off fixed nav height */
+
+/* a.anchor {
+    display: block;
+    position: relative;
+    top: -120px;
+    visibility: hidden;
+} */
+
 
 @media only screen and (max-width: 730px){
     /*Tablets [700 -> below]*/
@@ -568,6 +577,13 @@ footer {
         padding-top: .5rem;
         font-size: 14px;
     }
+        /*anchor nav height offset*/
+        a.anchor {
+            display: block;
+            position: relative;
+            top: -90px;
+            visibility: hidden;
+        } 
 }
 
 @media only screen and (max-width: 430px){
@@ -592,23 +608,16 @@ footer {
     .media-scroller {
         grid-auto-columns: 75%;
     }
-    
-    /* add nav offset padding on anchor links*/
-    a[href="#menu"],
-    a[href="#location"],
-    a[href="#contact"] {
-        /* add padding */
-        padding-top: 108px
-    }
+
 }
 
 @media only screen and (max-width: 320px){
     .logo {
         font-size: 30px;
     }
-/* 
+
     .hero {
-        margin-top: 120px;
-    } */
+        margin-top: 101px;
+    }
 
 } 
