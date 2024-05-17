@@ -593,11 +593,12 @@ footer {
         grid-auto-columns: 75%;
     }
     
+    /* add nav offset padding on anchor links*/
     a[href="#menu"],
     a[href="location"],
     a[href="contact"] {
         /* add padding */
-        margin-top: 108px
+        padding-top: 108px
     }
 }
 
