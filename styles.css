@@ -426,7 +426,7 @@ div.selected {
 .menu-wrapper {
     max-width: 100%;
     margin: 0 auto;
-    background-color: #dad7d789;
+    background-color: #dad7d748;
 }
 
 .menu h2 {
@@ -435,7 +435,7 @@ div.selected {
 }
 
 .menu-item {
-    background-color: #ffffff;
+    background-color: #ffffffbb;
     margin: 2rem;
     padding: 1rem;
 }
@@ -450,8 +450,16 @@ div.selected {
 }
 
 .menu-item .price {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
     font-weight: bold;
     color: #333;
+}
+
+.menu-title-wrapper {
+    background-color: #efeeee;
+    padding: 0 4px;
 }
 
 .description {
@@ -459,9 +467,9 @@ div.selected {
     text-align: left;
 }
 
-.price {
+/* .price {
     padding-bottom: .5rem;
-}
+} */
 
 .menu-title-wrapper {
     display: flex;
@@ -563,7 +571,6 @@ footer {
 
     .container.menu-wrapper {
         padding: 4rem 0;
-        background-color: #fff;
     }
 
     .media-element {
