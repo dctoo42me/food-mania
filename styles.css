@@ -595,7 +595,7 @@ footer {
     }
     
     .hero {
-        margin-top: 108px;
+        margin-top: 101px;
     }
 
     .hero h2 {
@@ -608,7 +608,6 @@ footer {
     .media-scroller {
         grid-auto-columns: 75%;
     }
-
 }
 
 @media only screen and (max-width: 320px){
@@ -617,7 +616,7 @@ footer {
     }
 
     .hero {
-        margin-top: 101px;
+        /* margin-top: 101px; */
     }
 
 } 
