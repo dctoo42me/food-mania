@@ -419,14 +419,14 @@ div.selected {
     background-image: url("img/background2.svg");
     background-repeat: repeat;
     background-size: contain;
-    background-position: center;
+    background-position: fixed;
     text-align: center;
 }
 
 .menu-wrapper {
     max-width: 100%;
     margin: 0 auto;
-    background-color: #dad7d748;
+    background-color: #dad7d721;
 }
 
 .menu h2 {
@@ -435,7 +435,7 @@ div.selected {
 }
 
 .menu-item {
-    background-color: #ffffffbb;
+    background-color: #ffffffa7;
     margin: 2rem;
     padding: 1rem;
 }
@@ -458,7 +458,7 @@ div.selected {
 }
 
 .menu-title-wrapper {
-    background-color: #efeeee;
+    background-color: #ecececdc;
     padding: 0 4px;
 }
 

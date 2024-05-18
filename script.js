@@ -4,7 +4,19 @@ const gallery = document.getElementById('gallery');
 const mediaElements = gallery.querySelectorAll('.media-element');
 const closeButton = document.querySelector('.close');
 const lightboxOverlay = document.querySelector('.lightbox-overlay');
+// Debuggin call btn
+const callButton = document.getElementById('callBtn');
+callButton.addEventListener('click', function() {
+    console.log('Call button clicked');
+    
+    // if (event.defaultPrevented) {
+    //     console.log('Default action has been prevented.');
+    // } else {
+    //     console.log('Default action has not been prevented.');
+    // }
 
+    // Add your existing functionality here
+});
 
 let isShiftPressed = false;
 // Add event listener for mouseover
@@ -73,10 +85,10 @@ window.addEventListener('click', function(event) {
 });
 
 // Nav hamburger menu interaction
-function toggleMenu() {
-    const hamburger = document.querySelector('.hamburger-menu');
-    hamburger.classList.toggle('active');
-}
+// function toggleMenu() {
+//     const hamburger = document.querySelector('.hamburger-menu');
+//     hamburger.classList.toggle('active');
+// }
 
 // Function to toggle the display of hamburger menu and navigation menu
 function toggleMenuDisplay() {
@@ -124,3 +136,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
