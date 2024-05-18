@@ -595,7 +595,7 @@ footer {
     }
     
     .hero {
-        margin-top: 101px;
+        margin-top: 90px;
     }
 
     .hero h2 {
@@ -608,6 +608,13 @@ footer {
     .media-scroller {
         grid-auto-columns: 75%;
     }
+            /*anchor nav height offset*/
+            a.anchor {
+                display: block;
+                position: relative;
+                top: -90px;
+                visibility: hidden;
+            } 
 }
 
 @media only screen and (max-width: 320px){
@@ -615,8 +622,8 @@ footer {
         font-size: 30px;
     }
 
-    .hero {
-        /* margin-top: 101px; */
-    }
+    /* .hero {
+        margin-top: 101px;
+    } */
 
 } 
