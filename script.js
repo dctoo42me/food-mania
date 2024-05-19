@@ -6,14 +6,14 @@ const closeButton = document.querySelector('.close');
 const lightboxOverlay = document.querySelector('.lightbox-overlay');
 // Debuggin call btn
 const callButton = document.getElementById('callBtn');
-callButton.addEventListener('click', function() {
+callButton.addEventListener('click', function(event) {
     console.log('Call button clicked');
     
-    // if (event.defaultPrevented) {
-    //     console.log('Default action has been prevented.');
-    // } else {
-    //     console.log('Default action has not been prevented.');
-    // }
+    if (event.defaultPrevented) {
+        console.log('Default action has been prevented.');
+    } else {
+        console.log('Default action has not been prevented.');
+    }
 
     // Add your existing functionality here
 });
@@ -117,11 +117,9 @@ window.addEventListener('resize', toggleMenuDisplay);
 
 // Toggle mobile menu when hamburger menu is clicked
 function toggleMenu() {
-    // const menu = document.querySelector('.main-menu');
-    // menu.classList.toggle('active');
-    
     const mobileMenu = document.querySelector('.mobile-menu');
-    mobileMenu.classList.toggle('active'); // Toggle the mobile menu
+ // Toggle the mobile menu
+    mobileMenu.classList.toggle('active');
 }
 
 //Scrolls to top of page

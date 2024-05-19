@@ -149,16 +149,20 @@ nav {
     margin-bottom: 15px;
     padding: 20px
 }
-
+/* 
 .mobile-menu ul li a {
     color: white;
     text-decoration: none;
     font-size: 20px;
-}
+} */
 
 .mobile-menu .btn {
     margin-top: 20px;
     padding: 10px 30px;
+}
+
+#callBtn {
+    z-index: 1000;
 }
 
 .close-btn {
@@ -196,7 +200,6 @@ nav {
 
 .btn:active {
     background-color: rgb(119, 193, 7);
-
 }
 
 /* Header styles */
