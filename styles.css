@@ -202,6 +202,9 @@ nav {
     background-color: rgb(119, 193, 7);
 }
 
+#callBtn {
+    z-index: 1000;
+}
 /* Header styles */
 header {
     display: flex;
