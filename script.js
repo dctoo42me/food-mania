@@ -4,19 +4,6 @@ const gallery = document.getElementById('gallery');
 const mediaElements = gallery.querySelectorAll('.media-element');
 const closeButton = document.querySelector('.close');
 const lightboxOverlay = document.querySelector('.lightbox-overlay');
-// Debuggin call btn
-const callButton = document.getElementById('callBtn');
-callButton.addEventListener('click', function(event) {
-    console.log('Call button clicked');
-    
-    if (event.defaultPrevented) {
-        console.log('Default action has been prevented.');
-    } else {
-        console.log('Default action has not been prevented.');
-    }
-
-    // Add your existing functionality here
-});
 
 let isShiftPressed = false;
 // Add event listener for mouseover
@@ -135,3 +122,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//phone link user confirmation
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('call-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        var userConfirmed = confirm('Do you want to call +1 (956) 226-2146?');
+        if (userConfirmed) {
+            window.location.href = this.href; // Redirect to the phone link if user confirmed
+        }
+    });
+});
