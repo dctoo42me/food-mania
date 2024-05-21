@@ -202,8 +202,12 @@ nav {
     background-color: rgb(119, 193, 7);
 }
 
-.btn.two  {
-    margin-left: 20px;
+.btns {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    width: max-content;
+    gap: 1rem;
 }
 
 /* Header styles */
@@ -290,32 +294,28 @@ p {
     /* Ensure pseudo-element is behind text */
 }
 
-.media {
-    background-color: rgba(119, 193, 7,.75);
-    padding: 2rem
-}
-
-.media h3, .media p {
-    /* color: #2b2b2b; */
-    color: #ffffff;
-}
-
 /* Gallery Styles */
 .media-wrapper {
+    background-color: rgba(119, 193, 7,.75);
     background-image: url("img/background2.svg");
     background-repeat: repeat;
     background-size: cover;
     background-position: center;
 }
 
+.media-wrapper h3 {
+    padding-top: 2rem;
+    background-color: rgba(119, 193, 7,.75);
+}
+
 .media-scroller {
     display: grid;
     gap: 1rem;
     grid-auto-flow: column;
-    grid-auto-columns: 50%;
+    grid-auto-columns: 25%;
     
-    padding: 0 1rem 3rem;
-    background-color: rgba(119, 193, 7,.8);
+    padding: 2rem 0;
+    background-color: rgba(119, 193, 7,.75);
 
     
     overflow-x: auto;
@@ -506,6 +506,18 @@ div.selected {
     width: 100%;
 }
 
+.section-title h3 {
+    text-align: left;
+    padding-left: 2rem;
+    color: #fff;
+    font-weight: normal;
+}
+
+.map .section-title {
+    padding-bottom: 2rem;
+}
+
+
 .map p {
     padding-bottom: 2rem;
 }
@@ -652,13 +664,12 @@ footer {
         border: none;
         width: 100%;
     }
-    .btns {
-        display: inline-flex;
-        flex-direction: column;
-        gap: 1rem;
+    .media-scroller {
+        grid-auto-columns: 40%;
     }
-    .btn.two {
-        margin-left: 0;
+    .section-title h3 {
+        text-align: center;
+        padding-left: 0;
     }
 }
 @media only screen and (max-width: 605px){
@@ -739,7 +750,7 @@ footer {
         font-size: 16px;
     }
     .media-scroller {
-        grid-auto-columns: 75%;
+        grid-auto-columns: 60%;
     }
             /*anchor nav height offset*/
             a.anchor {
@@ -750,11 +761,13 @@ footer {
             } 
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 340px){
     .logo {
         font-size: 30px;
     }
-
+    .media-scroller {
+        grid-auto-columns: 60%;
+    }
     /* .hero {
         margin-top: 101px;
     } */
