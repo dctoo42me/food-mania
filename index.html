@@ -38,7 +38,7 @@
                         <li class="nav" onclick="toggleMenu()"><a href="#contact">CONTACT</a></li>
                         <li class="nav" onclick="toggleMenu()"><a href="#location">LOCATION</a></li>
                     </ul>
-                    <a id="call-link" class="btn" href="tel:+19562262146" return="false">CALL US</a>
+                    <a id="call-link" class="btn" href="tel:+19562262146" return="true">CALL US</a>
                 </nav>
             </div>
         </header>
@@ -47,7 +47,10 @@
             <div class="container selected">
                 <h2>GET YOUR TACO FIX TODAY!</h2>
                 <p>Experience the delicious flavors of Tampico style food and more.</p>
-                <a href="#menu" class="btn">View Menu</a>
+                <div class="btns">
+                    <a href="#menu" class="btn">View Our Menu</a>
+                    <a href="#contact" class="btn two">We Cater Events<a>
+                </div>
             </div>
         </section>
             
@@ -242,7 +245,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="small-container">
-                        <h3>Phone</h3>
+                        <h3>Call Us</h3>
                         <p>
                             <a href="tel:+19562262146" id="call-link">(956) 226-2146</a>
                         </p>
@@ -255,7 +258,7 @@
                             </p>
                         </div>
                         <div class="small-container">
-                            <h3>Social Media</h3>
+                            <h3>Follow Us</h3>
                             <p>
                                 <a href="https://www.facebook.com/foodmania" target="_blank">Facebook</a><br>
                                 <a href="https://www.instagram.com/foodmania" target="_blank">Instagram</a><br>
@@ -266,6 +269,7 @@
                     <div class="contact-item">
                         <h3>Send us a Message</h3>
                         <form action="/send-email" method="POST">
+                            <p>Please Include Date and Party Size if Cater Inquiry</p>
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" required>
                             
