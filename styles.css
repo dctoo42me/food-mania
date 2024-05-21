@@ -606,6 +606,10 @@ footer {
     flex-direction: column;
 }
 
+form p {
+    color:#55616e
+}
+
 .contact-item label {
     margin-top: 10px;
 }
