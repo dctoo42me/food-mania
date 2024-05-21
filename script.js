@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('call-link').addEventListener('click', function(event) {
         event.preventDefault(); // Prevent the default anchor behavior
-        var userConfirmed = confirm('Do you want to call +1 (956) 226-2146?');
+        var userConfirmed = confirm('Do you want to call (956) 226-2146?');
         if (userConfirmed) {
             window.location.href = this.href; // Redirect to the phone link if user confirmed
         }
