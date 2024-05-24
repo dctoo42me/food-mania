@@ -754,6 +754,10 @@ form p {
     .hero h2 {
         font-size: 30px;
     }
+
+    .hero h1 {
+        font-size: 2rem
+    }
     
     .hero p {
         font-size: 16px;
