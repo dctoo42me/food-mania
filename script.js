@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentIndex < reviews.length - 1) {
                 currentIndex++;
             } else {
-                currentIndex = 0; // Reset to the first slide
+                currentIndex = 0;
             }
             updateCarousel();
         }, 10000); // Change every 10 seconds
@@ -201,10 +201,11 @@ document.addEventListener('DOMContentLoaded', function() {
         stopAutoScroll();
         if (currentIndex < reviews.length - 1) {
             currentIndex++;
+            updateCarousel();
         } else {
-            currentIndex = 0; // Reset to the first slide
+            currentIndex = 0; // Reset to the first review
+            updateCarousel(); // Update carousel position
         }
-        updateCarousel();
         startAutoScroll();
     });
 
@@ -229,12 +230,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (currentIndex < reviews.length - 1) {
                     currentIndex++;
                 } else {
-                    currentIndex = 0; // Reset to the first slide
+                    currentIndex = 0; // Reset to the first review
                 }
             } else {
                 // swiped right
                 if (currentIndex > 0) {
                     currentIndex--;
+                } else {
+                    currentIndex = reviews.length - 1; // Set to the last review
                 }
             }
             updateCarousel();
