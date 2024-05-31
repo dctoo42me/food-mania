@@ -160,68 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Reviews Section
-// document.addEventListener('DOMContentLoaded', function() {
-//     const carousel = document.querySelector('.carousel-inner');
-//     const reviews = document.querySelectorAll('.review');
-//     const prevButton = document.getElementById('prev');
-//     const nextButton = document.getElementById('next');
-//     let currentIndex = 0;
-//     let startX;
-//     let endX;
-
-//     function updateCarousel() {
-//         const offset = -currentIndex * 100;
-//         carousel.style.transform = `translateX(${offset}%)`;
-//     }
-
-//     prevButton.addEventListener('click', function() {
-//         if (currentIndex > 0) {
-//             currentIndex--;
-//         } else {
-//             currentIndex = reviews.length - 1;
-//         }
-//         updateCarousel();
-//     });
-
-//     nextButton.addEventListener('click', function() {
-//         if (currentIndex < reviews.length - 1) {
-//             currentIndex++;
-//         } else {
-//             currentIndex = 0;
-//         }
-//         updateCarousel();
-//     });
-
-//     // Touch event handlers
-//     carousel.addEventListener('touchstart', function(event) {
-//         startX = event.touches[0].clientX;
-//     });
-
-//     carousel.addEventListener('touchmove', function(event) {
-//         endX = event.touches[0].clientX;
-//     });
-
-//     carousel.addEventListener('touchend', function() {
-//         const threshold = 50; // Minimum swipe distance to trigger a slide change
-//         if (startX - endX > threshold) {
-//             // Swipe left (next)
-//             if (currentIndex < reviews.length - 1) {
-//                 currentIndex++;
-//             } else {
-//                 currentIndex = 0;
-//             }
-//         } else if (endX - startX > threshold) {
-//             // Swipe right (prev)
-//             if (currentIndex > 0) {
-//                 currentIndex--;
-//             } else {
-//                 currentIndex = reviews.length - 1;
-//             }
-//         }
-//         updateCarousel();
-//     });
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
     const carouselInner = document.querySelector('.carousel-inner');
     const reviews = document.querySelectorAll('.review');
@@ -240,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentIndex < reviews.length - 1) {
                 currentIndex++;
             } else {
-                currentIndex = 0;
+                currentIndex = 0; // Reset to the first slide
             }
             updateCarousel();
         }, 10000); // Change every 10 seconds
@@ -263,8 +201,10 @@ document.addEventListener('DOMContentLoaded', function() {
         stopAutoScroll();
         if (currentIndex < reviews.length - 1) {
             currentIndex++;
-            updateCarousel();
+        } else {
+            currentIndex = 0; // Reset to the first slide
         }
+        updateCarousel();
         startAutoScroll();
     });
 
@@ -288,6 +228,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // swiped left
                 if (currentIndex < reviews.length - 1) {
                     currentIndex++;
+                } else {
+                    currentIndex = 0; // Reset to the first slide
                 }
             } else {
                 // swiped right
@@ -315,6 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start auto-scroll when the page loads
     startAutoScroll();
 });
+
 
 // Share Button
 
