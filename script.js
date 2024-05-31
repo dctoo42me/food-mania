@@ -320,13 +320,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('shareButton').addEventListener('click', function() {
     // Get the current page URL
-    var currentPageUrl = window.location.href;
+    var homepageUrl = 'https://dctoo42me.github.io/food-mania';
 
     // Check if the Web Share API is supported by the browser
     if (navigator.share) {
         navigator.share({
             title: 'Check out this awesome website!',
-            url: currentPageUrl
+            url: homepageUrl
         })
         .then(() => console.log('Shared successfully'))
         .catch((error) => console.error('Error sharing:', error));
