@@ -132,3 +132,206 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+//swipe right to close the menu by certain amt of pixels
+document.addEventListener('DOMContentLoaded', function() {
+    let startX;
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    mobileMenu.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+    });
+
+    mobileMenu.addEventListener('touchmove', function(e) {
+        if (!startX) return;
+
+        const currentX = e.touches[0].clientX;
+        const diffX = currentX - startX;
+
+        if (diffX > 50) { // Adjust this value to set the swipe threshold
+            toggleMenu();
+            startX = null;
+        }
+    });
+
+    function toggleMenu() {
+        mobileMenu.classList.toggle('hidden');
+    }
+});
+
+// Reviews Section
+// document.addEventListener('DOMContentLoaded', function() {
+//     const carousel = document.querySelector('.carousel-inner');
+//     const reviews = document.querySelectorAll('.review');
+//     const prevButton = document.getElementById('prev');
+//     const nextButton = document.getElementById('next');
+//     let currentIndex = 0;
+//     let startX;
+//     let endX;
+
+//     function updateCarousel() {
+//         const offset = -currentIndex * 100;
+//         carousel.style.transform = `translateX(${offset}%)`;
+//     }
+
+//     prevButton.addEventListener('click', function() {
+//         if (currentIndex > 0) {
+//             currentIndex--;
+//         } else {
+//             currentIndex = reviews.length - 1;
+//         }
+//         updateCarousel();
+//     });
+
+//     nextButton.addEventListener('click', function() {
+//         if (currentIndex < reviews.length - 1) {
+//             currentIndex++;
+//         } else {
+//             currentIndex = 0;
+//         }
+//         updateCarousel();
+//     });
+
+//     // Touch event handlers
+//     carousel.addEventListener('touchstart', function(event) {
+//         startX = event.touches[0].clientX;
+//     });
+
+//     carousel.addEventListener('touchmove', function(event) {
+//         endX = event.touches[0].clientX;
+//     });
+
+//     carousel.addEventListener('touchend', function() {
+//         const threshold = 50; // Minimum swipe distance to trigger a slide change
+//         if (startX - endX > threshold) {
+//             // Swipe left (next)
+//             if (currentIndex < reviews.length - 1) {
+//                 currentIndex++;
+//             } else {
+//                 currentIndex = 0;
+//             }
+//         } else if (endX - startX > threshold) {
+//             // Swipe right (prev)
+//             if (currentIndex > 0) {
+//                 currentIndex--;
+//             } else {
+//                 currentIndex = reviews.length - 1;
+//             }
+//         }
+//         updateCarousel();
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const carouselInner = document.querySelector('.carousel-inner');
+    const reviews = document.querySelectorAll('.review');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    let currentIndex = 0;
+    let autoScrollInterval;
+
+    function updateCarousel() {
+        const width = reviews[0].offsetWidth;
+        carouselInner.style.transform = `translateX(-${currentIndex * width}px)`;
+    }
+
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(function() {
+            if (currentIndex < reviews.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        }, 10000); // Change every 10 seconds
+    }
+
+    function stopAutoScroll() {
+        clearInterval(autoScrollInterval);
+    }
+
+    prevButton.addEventListener('click', function() {
+        stopAutoScroll();
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+        startAutoScroll();
+    });
+
+    nextButton.addEventListener('click', function() {
+        stopAutoScroll();
+        if (currentIndex < reviews.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+        startAutoScroll();
+    });
+
+    let xDown = null;
+
+    function handleTouchStart(evt) {
+        xDown = evt.touches[0].clientX;
+    }
+
+    function handleTouchMove(evt) {
+        if (!xDown) {
+            return;
+        }
+
+        const xUp = evt.touches[0].clientX;
+        const xDiff = xDown - xUp;
+
+        if (Math.abs(xDiff) > 50) { // Minimum threshold to consider it a swipe
+            stopAutoScroll();
+            if (xDiff > 0) {
+                // swiped left
+                if (currentIndex < reviews.length - 1) {
+                    currentIndex++;
+                }
+            } else {
+                // swiped right
+                if (currentIndex > 0) {
+                    currentIndex--;
+                }
+            }
+            updateCarousel();
+            xDown = null; // Reset swipe tracking
+            startAutoScroll();
+        }
+    }
+
+    carouselInner.addEventListener('touchstart', function(evt) {
+        handleTouchStart(evt);
+    }, false);
+
+    carouselInner.addEventListener('touchmove', function(evt) {
+        evt.preventDefault(); // Prevent default scrolling
+        handleTouchMove(evt);
+    }, false);
+
+    window.addEventListener('resize', updateCarousel);
+
+    // Start auto-scroll when the page loads
+    startAutoScroll();
+});
+
+// Share Button
+
+document.getElementById('shareButton').addEventListener('click', function() {
+    // Get the current page URL
+    var currentPageUrl = window.location.href;
+
+    // Check if the Web Share API is supported by the browser
+    if (navigator.share) {
+        navigator.share({
+            title: 'Check out this awesome website!',
+            url: currentPageUrl
+        })
+        .then(() => console.log('Shared successfully'))
+        .catch((error) => console.error('Error sharing:', error));
+    } else {
+        // Fallback for browsers that do not support Web Share API
+        alert('Sharing not supported in this browser.');
+    }
+});

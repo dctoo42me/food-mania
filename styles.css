@@ -122,7 +122,7 @@ nav {
     align-items: center;
     top: 0;
     right: -100%; /* Initially off-screen */
-    width: 80%; /* Adjust width as needed */
+    width: 100%; /* Adjust width as needed */
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* Semi-blurred dark background */
     backdrop-filter: blur(5px); /* Apply blur effect */
@@ -131,6 +131,7 @@ nav {
     padding: 20px;
     padding-top: 20%;
     color: white;
+    transition: right 0.3s ease, transform 0.3s ease;
 }
 
 .mobile-menu li :active {
@@ -163,6 +164,10 @@ nav {
 .mobile-menu a {
     text-decoration: none;
     color: #fff;
+}
+
+.mobile-menu.hidden {
+    transform: translateX(100%);
 }
 
 .close-btn {
@@ -426,7 +431,6 @@ div.selected {
 }
 
 /* menu styles */
-/* Styles for menu section */
 .menu {
     background-image: url("img/background2.svg");
     background-repeat: repeat;
@@ -449,16 +453,20 @@ div.selected {
 .menu-item {
     background-color: #f2f0f0a6;
     margin: 2rem;
-    padding: 1rem;
+    padding: rem;
 }
 
 .menu-item h3 {
     font-size: 1.5rem;
+    font-weight: 100;
     color: #555;
 }
 
 .menu-item .description {
+    font-size: 1.2rem;
+    font-weight: 100;
     color: #777;
+    padding-left: 1rem;
 }
 
 .menu-item .price {
@@ -470,8 +478,19 @@ div.selected {
 }
 
 .menu-title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
     background-color: #fff;
-    padding: 0 4px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(232, 232, 232);
+    text-align: left;
+}
+
+.menu-title-wrapper.group {
+    border: none;
+    padding: 0;
 }
 
 .description {
@@ -479,17 +498,100 @@ div.selected {
     text-align: left;
 }
 
-/* .price {
-    padding-bottom: .5rem;
-} */
-
-.menu-title-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+.title {
+    margin-bottom: 1rem;
 }
 
+/* Reviews Styles */
+.reviews-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 3rem 0;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.carousel {
+    margin: 1rem 0 1rem; 
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.carousel-inner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    transition: transform 1.5s ease;
+}
+
+
+.carousel-control {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    cursor: pointer;
+    pointer-events: auto; /* Allow clicks on the buttons */
+}
+
+.carousel-controls button {
+    font-size: 50px;
+    color: #e9e6e6;
+    &&:hover {
+        color: #dedede;
+    }
+    &&:active {
+        color: #e9e6e6;
+    }
+}
+
+/* added by chatGPT */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+.review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
+
+.review-content {
+    width: 50%;
+    padding: 10px;
+    background-color: #f6f2f2;
+}
+
+.review p {
+    margin-bottom: 1rem;
+}
+
+.review span {
+    font-style: italic;
+    color: #1d1d1d;
+}
+
+.section-title .dark{
+    color: #575656;
+}
 .group {
     display: flex;
     flex-direction: column;
@@ -542,12 +644,12 @@ footer {
 
 /* add top margin to offset anchor tags off fixed nav height */
 
-/* a.anchor {
+a.anchor {
     display: block;
     position: relative;
-    top: -120px;
+    top: -87.2px;
     visibility: hidden;
-} */
+}
 
 .contact-section {
     padding: 40px 0;
@@ -680,6 +782,17 @@ form p {
         text-align: center;
         padding-left: 0;
     }
+
+    .carousel-controls {
+        display: none;
+    }
+        /*anchor nav height offset*/
+        a.anchor {
+            display: block;
+            position: relative;
+            top: -121.2px;
+            visibility: hidden;
+    }
 }
 @media only screen and (max-width: 605px){
     /*Small smartphones [605 -> below]*/
@@ -704,16 +817,20 @@ form p {
     }
 
     .menu-item {
-        margin: 0;
+        margin: 2rem 0;
     }
 
     .menu-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .menu-item .description {
         font-size: 1rem;
     }
 
     .menu-item p {
-        font-size: .75rem;
-    }
+        font-size: 1rem;
+    }    
 
     .container.menu-wrapper {
         padding: 4rem 0;
@@ -730,13 +847,17 @@ form p {
         padding-top: .5rem;
         font-size: 14px;
     }
-        /*anchor nav height offset*/
-        a.anchor {
+
+    .review-content {
+        width: 80%
+    }
+    /*anchor nav height offset*/
+    a.anchor {
             display: block;
             position: relative;
-            top: -90px;
+            top: -112.2px;
             visibility: hidden;
-        } 
+    }
 }
 
 @media only screen and (max-width: 430px){
@@ -765,13 +886,13 @@ form p {
     .media-scroller {
         grid-auto-columns: 60%;
     }
-            /*anchor nav height offset*/
-            a.anchor {
-                display: block;
-                position: relative;
-                top: -90px;
-                visibility: hidden;
-            } 
+    /*anchor nav height offset*/
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -108.2px;
+        visibility: hidden;
+    } 
 }
 
 @media only screen and (max-width: 340px){
@@ -781,8 +902,14 @@ form p {
     .media-scroller {
         grid-auto-columns: 60%;
     }
-    /* .hero {
-        margin-top: 101px;
-    } */
-
+    .review-content {
+        width: 100%;
+    }
+    /*anchor nav height offset*/
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -101px;
+        visibility: hidden;
+    } 
 } 

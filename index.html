@@ -28,14 +28,14 @@
 <body>
     <div class="app-wrapper">
         <!-- <div class="wrapper"> -->
-            <header>
-                <div class="header">
-                    <h1 class="logo"><a href="#home" class="logo-link">Food Mania</a></h1>
-                    <!-- Hamburger menu icon -->
-                    <div class="hamburger-menu" onclick="toggleMenu()">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                        <div class="bar"></div>
+        <header>
+            <div class="header">
+                <h1 class="logo"><a href="#home" class="logo-link">Food Mania</a></h1>
+                <!-- Hamburger menu icon -->
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                 </div>
                 <!-- Navigation menu -->
                 <nav class="main-menu">
@@ -53,6 +53,7 @@
                         <li class="nav" onclick="toggleMenu()"><a href="#menu">MENU</a></li>
                         <li class="nav" onclick="toggleMenu()"><a href="#contact">CONTACT</a></li>
                         <li class="nav" onclick="toggleMenu()"><a href="#location">LOCATION</a></li>
+                        <li class="nav" onclick="toggleMenu()"><a id="shareButton" href="#">SHARE</a></li>
                     </ul>
                     <a id="call-link" class="btn" href="tel:+19562262146" return="true">CALL US</a>
                 </nav>
@@ -69,9 +70,9 @@
                     </div>
                 </div>
                 <img src="img/og-image.jpg" alt="Fallback Image" style="display:none;">
-            </section>
+        </section>
             
-            <section class="media-wrapper">
+        <section class="media-wrapper">
             <div class="section-title">
                 <h3>DISCOVER OUR DISHES</h3>
             </div>
@@ -216,7 +217,7 @@
                     <p class="description">Served with tomato, grilled onions, and fries</p>
                 </div>
                 <div class="menu-item">
-                    <h3>Drinks</h3>
+                    <h3 class="title">Drinks</h3>
                     <div class="menu-title-wrapper group">
                         <div class="menu-title-wrapper">
                             <p class="description">Coca Lata (Canned Coke)</p>
@@ -233,7 +234,7 @@
                     </div>
                 </div>
                 <div class="menu-item">
-                    <h3>Sides</h3>
+                    <h3 class="title">Sides</h3>
                     <div class="menu-title-wrapper group">
                         <div class="menu-title-wrapper">
                             <p class="description">Charro Beans</p>
@@ -252,9 +253,56 @@
                 <!-- Add more menu items as needed -->
             </div>
         </section>
-                <!--offset height of fixed nav-->
-                <a id="contact" class="anchor"></a>
-                <!--offset height of fixed nav-->
+        <section id="reviews" class="reviews-section">
+            <div class="section-title">
+            <h3 class="dark">WHAT OUR CUSTOMERS ARE SAYING...</h3>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="review">
+                        <div class="review-content">
+                            <p>"Had them last night 6-3-2022 for my daughters graduation party and let me just say, all my guests were satisfied!! will definitely recommend and be coming back!!!
+                                Thank You Foodmania!!"</p>
+                            <span>- Beatriz Q.</span>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="review-content">
+                            <p>"First time visitor: I ordered a cheeseburger combo from there today for lunch and it was the best one I’ve ever had! Great customer service and delicious food, I highly recommend it! 🌟🌟🌟🌟🌟"</p>
+                            <span>- Noemi B.</span>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="review-content">
+                            <p>"I love the Tampico style flavors!"</p>
+                            <span>- Mike L.</span>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="review-content">
+                            <p>"esta con ganas los taquitos y los hotdogs y las hamburgesas y los estrps de pollo y la salsas estan que arden. recomiendo este lugar al 💯"</p>
+                            <span>- Checo G.</span>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="review-content">
+                            <p>"Ordered a double Angus bacon cheese burger and it is amazing!! Will definitely be returning time and time again. Customer service was great too!"</p>
+                            <span>- Cory B.</span>
+                        </div>
+                    </div>
+                    <!-- Add more reviews as needed -->
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button id="prev" class="carousel-control prev">&lt;</button>
+                <button id="next" class="carousel-control next">&gt;</button>
+            </div>
+        </div>
+        </section>
+        <!--offset height of fixed nav-->
+            <a id="contact" class="anchor"></a>
+        <!--offset height of fixed nav-->
         <section id="contact" class="contact-section">
             <div class="contact-wrapper">
                 <div class="section-title">
@@ -305,7 +353,7 @@
         </section>
         
         <!--offset height of fixed nav-->
-        <a id="location" class="anchor"></a>
+            <a id="location" class="anchor"></a>
         <!--offset height of fixed nav-->
         <section class="map">
             <div>
