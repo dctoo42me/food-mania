@@ -325,7 +325,7 @@ document.getElementById('shareButton').addEventListener('click', function() {
     // Check if the Web Share API is supported by the browser
     if (navigator.share) {
         navigator.share({
-            title: 'Check out this awesome website!',
+            title: 'Check out this awesome Food Truck!',
             url: homepageUrl
         })
         .then(() => console.log('Shared successfully'))

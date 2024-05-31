@@ -506,7 +506,7 @@ div.selected {
 .reviews-section {
     text-align: center;
     padding: 2rem;
-    background-color: #ffffff;
+    background-color: #8d8a8a;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -577,7 +577,7 @@ div.selected {
 .review-content {
     width: 50%;
     padding: 10px;
-    background-color: #f6f2f2;
+    background-color: #ffffff;
 }
 
 .review p {
@@ -589,8 +589,8 @@ div.selected {
     color: #1d1d1d;
 }
 
-.section-title .dark{
-    color: #575656;
+.section-title .color{
+    color: #ffffff;
 }
 .group {
     display: flex;
