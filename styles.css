@@ -11,10 +11,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #3a3a3a;
+    /* background-color: #3a3a3a; */
 }
 
 .app-wrapper {
@@ -240,11 +240,7 @@ header {
 }
 
 .container {
-    padding: 100px 20px;
-}
-
-.container.menu {
-    padding: 2rem ;
+    padding: 4rem 6rem 8rem ;
 }
 
 p {
@@ -279,11 +275,6 @@ p {
 
 .hero h1 {
     font-size: 3rem;
-    color: #2b2b2b;
-}
-
-.menu h2 {
-    font-size: 2.5rem;
     color: #2b2b2b;
 }
 
@@ -432,7 +423,7 @@ div.selected {
 
 /* menu styles */
 .menu {
-    background-image: url("img/background2.svg");
+    /* background-image: url("img/background2.svg"); */
     background-repeat: repeat;
     background-size: contain;
     background-position: fixed;
@@ -442,18 +433,16 @@ div.selected {
 .menu-wrapper {
     max-width: 100%;
     margin: 0 auto;
-    background-color: #dad7d721;
+    background-color: #e62421d8;
 }
 
 .menu h2 {
-    margin-bottom: 1.5rem;
-    color: #333;
+    margin-bottom: 2rem;
+    color: #fff;
 }
 
 .menu-item {
-    background-color: #f2f0f0a6;
-    margin: 2rem;
-    padding: rem;
+    background-color: #f2f0f0e5;
 }
 
 .menu-item h3 {
@@ -462,11 +451,24 @@ div.selected {
     color: #555;
 }
 
+.menu-item h3.title {
+    color: #fff;
+}
+
+.menu-item.no-color {
+    background-color: #c7454500;
+}
+
 .menu-item .description {
     font-size: 1.2rem;
     font-weight: 100;
     color: #777;
-    padding-left: 1rem;
+    text-align: left;
+    padding: .5rem .5rem .5rem 1.5rem;
+}
+
+.description.last {
+    border-bottom: 1px solid rgb(207, 206, 206);
 }
 
 .menu-item .price {
@@ -474,7 +476,7 @@ div.selected {
     flex-direction: column;
     justify-content:center;
     font-weight: bold;
-    color: #333;
+    color: #555;
 }
 
 .menu-title-wrapper {
@@ -483,7 +485,7 @@ div.selected {
     justify-content: space-between;
     width: 100%;
     background-color: #fff;
-    padding: .5rem 1rem;
+    padding: 1rem;
     border: 1px solid rgb(232, 232, 232);
     text-align: left;
 }
@@ -493,20 +495,23 @@ div.selected {
     padding: 0;
 }
 
-.description {
-    padding-top: .5rem;
-    text-align: left;
+.logo-font {
+    font-family: Gluten;
+    font-weight: 600;
+    font-size: 4rem;
+    color: #fff;
 }
 
 .title {
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    padding: 1rem;
 }
 
 /* Reviews Styles */
 .reviews-section {
     text-align: center;
     padding: 2rem;
-    background-color: #8d8a8a;
+    background-color: #77c107;
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -598,7 +603,7 @@ div.selected {
 }
 
 .map {
-    background-color: #979797;
+    background-color: #333333;
     display: flex;
     padding: 2rem;
     color: #333;
@@ -653,7 +658,7 @@ a.anchor {
 
 .contact-section {
     padding: 40px 0;
-    background-color:  rgb(119, 193, 7);
+    background-color: #979797;
     text-align: center;
 }
 
@@ -761,6 +766,9 @@ form p {
         justify-content: center;
         align-items: center;
     }
+    .container {
+        padding: 2rem 2rem 2rem;
+    }
     .contact-info {
         background: #fff;
         flex-direction: column;
@@ -778,20 +786,25 @@ form p {
     .media-scroller {
         grid-auto-columns: 40%;
     }
+
     .section-title h3 {
         text-align: center;
         padding-left: 0;
     }
 
+    .section-title.reviews h3 {
+        padding: 0 10px;
+    }
+
     .carousel-controls {
         display: none;
     }
-        /*anchor nav height offset*/
-        a.anchor {
-            display: block;
-            position: relative;
-            top: -121.2px;
-            visibility: hidden;
+    /*anchor nav height offset*/
+    a.anchor {
+        display: block;
+        position: relative;
+        top: -121.2px;
+        visibility: hidden;
     }
 }
 @media only screen and (max-width: 605px){
@@ -815,11 +828,7 @@ form p {
     .menu {
         padding: 0;
     }
-
-    .menu-item {
-        margin: 2rem 0;
-    }
-
+    
     .menu-item h3 {
         font-size: 1.25rem;
     }
@@ -833,7 +842,8 @@ form p {
     }    
 
     .container.menu-wrapper {
-        padding: 4rem 0;
+        padding-top: 3rem;
+        padding-bottom: 8rem;
     }
 
     .media-element {
@@ -862,7 +872,9 @@ form p {
 
 @media only screen and (max-width: 430px){
     /*Small smartphones [430 -> below]*/
-    
+    .container{
+        padding: 1rem;
+    }
     .logo {
         font-size: 36px;
         padding-bottom: .5rem;
