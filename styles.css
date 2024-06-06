@@ -14,7 +14,7 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    /* background-color: #3a3a3a; */
+    background-color: #3a3a3a;
 }
 
 .app-wrapper {
@@ -107,6 +107,10 @@ nav {
     color: #a3a3a3;
 }
 
+.main-menu .btn a{
+    font-weight: 600;
+}
+
 /* mobile menu styles*/
 
 /* initial state */
@@ -157,6 +161,7 @@ nav {
 }
 
 .mobile-menu .btn {
+    font-weight: 600;
     margin-top: 20px;
     padding: 10px 30px;
 }
@@ -192,7 +197,7 @@ nav {
     color:#ffffff;
     background-color: rgb(119, 193, 7);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: normal;
     line-height: normal;
     transition: background-color 0.4s ease;
     box-shadow: 1px 1px 10px rgba(60, 60, 60, 0.831); /* Button shadow */
@@ -503,8 +508,8 @@ div.selected {
 }
 
 .title {
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 1rem;
+    padding: 1.5rem;
 }
 
 /* Reviews Styles */
@@ -758,6 +763,11 @@ form p {
     padding-top: 1.5rem;
 }
 
+.small-container h3, .contact-item h3  {
+    font-weight: 600;
+    color: #555;
+}
+
 @media only screen and (max-width: 730px){
     /*Tablets [730 -> below]*/
     .header {
@@ -852,12 +862,6 @@ form p {
         padding: .75rem;
     }
     
-    .media-element > p {
-        text-align: center;
-        padding-top: .5rem;
-        font-size: 14px;
-    }
-
     .review-content {
         width: 80%
     }
