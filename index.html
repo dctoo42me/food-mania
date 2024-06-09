@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Experience the authentic taste of Tampico-style tacos and more at our food truck. Fresh ingredients, bold flavors, and a vibrant atmosphere await you.">
     <meta property="og:title" content="Indulge in Tampico Flavors: Food Mania's Authentic Taco Delights">
-    <meta property="og:image" content="https://raw.githubusercontent.com/dctoo42me/food-mania/4aa6bc217bde6782558e7703c32fd37e0519a4dd/img/og-image.jpg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/dctoo42me/food-mania/main/img/tacos_yummy.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://dctoo42me.github.io/food-mania/">
@@ -48,7 +48,7 @@
                 </nav>
                 <!--Mobile Navigation menu -->
                 <nav class="mobile-menu">
-                    <div class="close-btn" onclick="toggleMenu()">X</div>
+                    <div class="close-btn" onclick="toggleMenu()">&times;</div>
                     <ul>
                         <li class="nav" onclick="toggleMenu()"><a href="#menu">MENU</a></li>
                         <li class="nav" onclick="toggleMenu()"><a href="#contact">CONTACT</a></li>
@@ -61,12 +61,12 @@
         </header>
         <section class="spacer"></section>
         <section id="home" class="hero">
-            <div class="container selected">
+            <div class="selected">
                 <h1>GET YOUR TACO FIX TODAY!</h1>
                 <p>EXPERIENCE THE DELICIOUS FLAVORS OF TAMPICO STYLE FOOD</p>
                 <div class="btns">
                     <a href="#menu" class="btn">OUR MENU</a>
-                    <a href="#contact" class="btn two">CATER EVENT<a>
+                    <a href="#cater" class="btn two">CATER EVENT<a>
                     </div>
                 </div>
                 <img src="img/og-image.jpg" alt="Fallback Image" style="display:none;">
@@ -139,113 +139,115 @@
         <section class="menu">
             <div class="container menu-wrapper">
                 <h2 class="logo-font">MENU</h2>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>TACOS DE BISTEC OR PASTOR</h3>
-                        <p class="price">$1.69</p>
+                <div class="border-rad">
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>TACOS DE BISTEC OR PASTOR</h3>
+                            <p class="price">$1.69</p>
+                        </div>
+                        <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
                     </div>
-                    <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>ORDEN DE TACOS (ORDER OF TACOS)</h3>
-                        <p class="price">$9.99</p>
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>ORDEN DE TACOS (ORDER OF TACOS)</h3>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
                     </div>
-                    <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>TORTAS DE BISTEC OR PASTOR</h3>
-                        <p class="price">$8.25</p>
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>TORTAS DE BISTEC OR PASTOR</h3>
+                            <p class="price">$8.25</p>
+                        </div>
+                        <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
                     </div>
-                    <p class="description">Served with cilantro, cheese, avocado, and grilled onions</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>GRINGA OR PIRATA</h3>
-                        <p class="price">$8.25</p>
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>GRINGA OR PIRATA</h3>
+                            <p class="price">$8.25</p>
+                        </div>
+                        <p class="description">Large fluor tortilla, melted cheese, and grilled onions (Bistec or Pastor)</p>
                     </div>
-                    <p class="description">Large fluor tortilla, melted cheese, and grilled onions (Bistec or Pastor)</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>FAJITA QUESADILLA AND FRIES</h3>
-                        <p class="price">$12.50</p>
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>FAJITA QUESADILLA AND FRIES</h3>
+                            <p class="price">$12.50</p>
+                        </div>
+                        <p class="description">Large fluor tortilla, fajita, melted cheese, lettuce and tomato al lado (on the side)</p>
                     </div>
-                    <p class="description">Large fluor tortilla, fajita, melted cheese, lettuce and tomato al lado (on the side)</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>PHILLY CHEESESTEAK AND FRIES</h3>
-                        <p class="price">$12.50</p>
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>PHILLY CHEESESTEAK AND FRIES</h3>
+                            <p class="price">$12.50</p>
+                        </div>
+                        <p class="description">Sirloin meat, bell pepper, grilled onion, mozzarella cheese</p>
                     </div>
-                    <p class="description">Sirloin meat, bell pepper, grilled onion, mozzarella cheese</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>BACON CHEESEBURGER AND FRIES</h3>
-                        <p class="price">$10.75</p>
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>BACON CHEESEBURGER AND FRIES</h3>
+                            <p class="price">$10.75</p>
+                        </div>
+                        <p class="description">Lettuce, tomato, onions, and pickles</p>
                     </div>
-                    <p class="description">Lettuce, tomato, onions, and pickles</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>ANGUS MUSHROOM BURGER AND FRIES</h3>
-                        <p class="price">$12.00</p>
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>ANGUS MUSHROOM BURGER AND FRIES</h3>
+                            <p class="price">$12.00</p>
+                        </div>
+                        <p class="description">Mushrooms, grilled onions, pickles, mozzarella cheese, lettuce, tomato</p>
                     </div>
-                    <p class="description">Mushrooms, grilled onions, pickles, mozzarella cheese, lettuce, tomato</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>MEXICAN BURGER AND FRIES</h3>
-                        <p class="price">$10.75</p>
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>MEXICAN BURGER AND FRIES</h3>
+                            <p class="price">$10.75</p>
+                        </div>
+                        <p class="description">Grilled Ham, avocado, pickles, cheese, lettuce, potato, onions</p>
                     </div>
-                    <p class="description">Grilled Ham, avocado, pickles, cheese, lettuce, potato, onions</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>CHICKEN STRIPS AND FRIES</h3>
-                        <p class="price">$8.75</p>
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>CHICKEN STRIPS AND FRIES</h3>
+                            <p class="price">$8.75</p>
+                        </div>
+                        <p class="description">Three (3) Chicken Tenders & fries</p>
                     </div>
-                    <p class="description">Three (3) Chicken Tenders & fries</p>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title-wrapper">
-                        <h3>JUMBO HOTDOG AND FRIES</h3>
-                        <p class="price">$8.99</p>
+                    <div class="menu-item">
+                        <div class="menu-title-wrapper">
+                            <h3>JUMBO HOTDOG AND FRIES</h3>
+                            <p class="price">$8.99</p>
+                        </div>
+                        <p class="description last">Served with tomato, grilled onions, and fries</p>
                     </div>
-                    <p class="description last">Served with tomato, grilled onions, and fries</p>
                 </div>
                 <div class="menu-item no-color">
                     <h3 class="title">DRINKS</h3>
-                    <div class="menu-title-wrapper group">
+                    <div class="menu-title-wrapper group  border-rad">
                         <div class="menu-title-wrapper">
-                            <p class="description">Coca Lata (Canned Coke)</p>
+                            <h3>Coca Lata (Canned Coke)</h3>
                             <p class="price">$1.50</p>
                         </div>
                         <div class="menu-title-wrapper">
-                            <p class="description">Coca Mexicana</p>
+                            <h3>Coca Mexicana</h3>
                             <p class="price">$3.50</p>
                         </div>
                         <div class="menu-title-wrapper">
-                            <p class="description">Botella de Agua (Bottled Water)</p>
+                            <h3>Botella de Agua (Bottled Water)</h3>
                             <p class="price">$1.00</p>
                         </div>
                     </div>
                 </div>
                 <div class="menu-item no-color">
                     <h3 class="title">SIDES</h3>
-                    <div class="menu-title-wrapper group">
+                    <div class="menu-title-wrapper group border-rad">
                         <div class="menu-title-wrapper">
-                            <p class="description">Charro Beans</p>
+                            <h3>Charro Beans</h3>
                             <p class="price">$2.25</p>
                         </div>
                         <div class="menu-title-wrapper">
-                            <p class="description">Salsa, Ketchup, Mayo</p>
+                            <h3>Salsa, Ketchup, Mayo</h3>
                             <p class="price">$0.25 ea</p>
                         </div>
                         <div class="menu-title-wrapper">
-                            <p class="description">Jalapeno, BBQ, Ranch</p>
+                            <h3>Jalapeno, BBQ, Ranch</h3>
                             <p class="price">$0.50 ea</p>
                         </div>
                     </div>
@@ -253,58 +255,61 @@
                 <!-- Add more menu items as needed -->
             </div>
         </section>
-        <section id="reviews" class="reviews-section">
-            <div class="section-title reviews">
-            <h3 class="color">WHAT OUR CUSTOMERS ARE SAYING ON SOCIAL MEDIA...</h3><a href="https://www.facebook.com/foodmaniatampicostyle/">FB</a>
-        </div>
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="carousel-inner">
-                    <div class="review">
-                        <div class="review-content">
-                            <p>"Had them last night 6-3-2022 for my daughters graduation party and let me just say, all my guests were satisfied!! will definitely recommend and be coming back!!!
-                                Thank You Foodmania!!"</p>
-                            <span>- Beatriz Q.</span>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="review-content">
-                            <p>"First time visitor: I ordered a cheeseburger combo from there today for lunch and it was the best one I’ve ever had! Great customer service and delicious food, I highly recommend it! 🌟🌟🌟🌟🌟"</p>
-                            <span>- Noemi B.</span>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="review-content">
-                            <p>"I love the Tampico style flavors!"</p>
-                            <span>- Mike L.</span>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="review-content">
-                            <p>"esta con ganas los taquitos y los hotdogs y las hamburgesas y los estrps de pollo y la salsas estan que arden. recomiendo este lugar al 💯"</p>
-                            <span>- Checo G.</span>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="review-content">
-                            <p>"Ordered a double Angus bacon cheese burger and it is amazing!! Will definitely be returning time and time again. Customer service was great too!"</p>
-                            <span>- Cory B.</span>
-                        </div>
-                    </div>
-                    <!-- Add more reviews as needed -->
+        <section id="reviews" class=" reviews-section" >
+            <div class="container reviews">
+                <div class="section-title">
+                    <h3 class="color">WHAT OUR CUSTOMERS ARE SAYING ON SOCIAL MEDIA...</h3>
                 </div>
+                <div class="carousel-container border-rad">
+                    <div class="carousel">
+                        <div class="carousel-inner">
+                            <div class="review">
+                                <div class="review-content">
+                                    <p>"Had them last night 6-3-2022 for my daughters graduation party and let me just say, all my guests were satisfied!! will definitely recommend and be coming back!!!
+                                        Thank You Foodmania!!"</p>
+                                    <span>- Beatriz Q.</span>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="review-content">
+                                    <p>"First time visitor: I ordered a cheeseburger combo from there today for lunch and it was the best one I’ve ever had! Great customer service and delicious food, I highly recommend it! 🌟🌟🌟🌟🌟"</p>
+                                    <span>- Noemi B.</span>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="review-content">
+                                    <p>"I love the Tampico style flavors!"</p>
+                                    <span>- Mike L.</span>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="review-content">
+                                    <p>"esta con ganas los taquitos y los hotdogs y las hamburgesas y los estrps de pollo y la salsas estan que arden. recomiendo este lugar al 💯"</p>
+                                    <span>- Checo G.</span>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="review-content">
+                                    <p>"Ordered a double Angus bacon cheese burger and it is amazing!! Will definitely be returning time and time again. Customer service was great too!"</p>
+                                    <span>- Cory B.</span>
+                                </div>
+                            </div>
+                            <!-- Add more reviews as needed -->
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button id="prev" class="carousel-control prev">&lt;</button>
+                        <button id="next" class="carousel-control next">&gt;</button>
+                    </div>
+                </div>
+                <a href="https://www.facebook.com/foodmaniatampicostyle/">
+                    <img src="img/facebook_icon.png" class="fb">
+                </a>
             </div>
-            <div class="carousel-controls">
-                <button id="prev" class="carousel-control prev">&lt;</button>
-                <button id="next" class="carousel-control next">&gt;</button>
-            </div>
-        </div>
         </section>
-        <!--offset height of fixed nav-->
-            <a id="contact" class="anchor"></a>
-        <!--offset height of fixed nav-->
+
         <section id="contact" class="contact-section">
-            <div class="contact-wrapper">
+            <div class="container contact">
                 <div class="section-title">
                     <h3>CONTACT US</h3>
                 </div>
@@ -332,9 +337,12 @@
                             </p>
                         </div>
                     </div>
+            <!--offset height of fixed nav-->
+            <a id="cater" class="anchor"></a>
+            <!--offset height of fixed nav-->
                     <div class="contact-item">
                         <h3>Send us a Message</h3>
-                        <form action="/send-email" method="POST">
+                        <form action="/send-email" method="POST" >
                             <p>Please Include Date and Party Size if Cater Inquiry</p>
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" required>
@@ -355,7 +363,7 @@
         <!--offset height of fixed nav-->
             <a id="location" class="anchor"></a>
         <!--offset height of fixed nav-->
-        <section class="map">
+        <section class="map container">
             <div>
             <div class="section-title">
                 <h3>OUR LOCATION</h3>

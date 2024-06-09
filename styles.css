@@ -245,7 +245,7 @@ header {
 }
 
 .container {
-    padding: 4rem 6rem 8rem ;
+    padding: 6rem 4rem ;
 }
 
 p {
@@ -256,13 +256,14 @@ p {
 
 .spacer {
     width: 100%;
-    margin-top: 73px;
+    margin-top: 87.2px;
 }
 
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
     background-image: url(img/taquitosPlate2.jpg);
     background-size: cover;
@@ -280,6 +281,7 @@ p {
 
 .hero h1 {
     font-size: 3rem;
+    line-height: 3.25rem;
     color: #2b2b2b;
 }
 
@@ -311,6 +313,7 @@ p {
 
 .media-wrapper h3 {
     padding-top: 2rem;
+    padding-left: 4rem;
     background-color: rgba(119, 193, 7,.75);
 }
 
@@ -339,7 +342,7 @@ p {
     background:rgba(255, 255, 255, 0.694);
     /* background:#dcdbdb; */
     color: #403f3f;
-    border-radius: 4px 6px;
+    border-radius: 6px;
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 20px; */
     transition: opacity .3s;
 }
@@ -365,7 +368,7 @@ p {
 div.selected {
     position: relative;
     color: #161515;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     z-index: 2;
 }
 
@@ -428,7 +431,7 @@ div.selected {
 
 /* menu styles */
 .menu {
-    /* background-image: url("img/background2.svg"); */
+    background-image: url("img/background2.svg");
     background-repeat: repeat;
     background-size: contain;
     background-position: fixed;
@@ -437,7 +440,6 @@ div.selected {
 
 .menu-wrapper {
     max-width: 100%;
-    margin: 0 auto;
     background-color: #e62421d8;
 }
 
@@ -447,13 +449,13 @@ div.selected {
 }
 
 .menu-item {
-    background-color: #f2f0f0e5;
+    background-color: #fffefef5;
 }
 
 .menu-item h3 {
     font-size: 1.5rem;
-    font-weight: 100;
-    color: #555;
+    font-weight: 600;
+    color: #434343;
 }
 
 .menu-item h3.title {
@@ -467,9 +469,9 @@ div.selected {
 .menu-item .description {
     font-size: 1.2rem;
     font-weight: 100;
-    color: #777;
+    color: #767474;
     text-align: left;
-    padding: .5rem .5rem .5rem 1.5rem;
+    padding: .12rem .12rem .12rem 2rem;
 }
 
 .description.last {
@@ -490,14 +492,24 @@ div.selected {
     justify-content: space-between;
     width: 100%;
     background-color: #fff;
-    padding: 1rem;
-    border: 1px solid rgb(232, 232, 232);
+    padding: 2rem 2rem 1rem;
+    /* border: 1px solid rgb(232, 232, 232); */
     text-align: left;
 }
 
 .menu-title-wrapper.group {
     border: none;
     padding: 0;
+}
+
+.group div:last-child {
+    padding-bottom: 2rem;
+    /* background-color: purple; */
+}
+
+.border-rad {
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .logo-font {
@@ -514,17 +526,21 @@ div.selected {
 
 /* Reviews Styles */
 .reviews-section {
+    background-image: url("img/background2.svg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    padding: 2rem;
-    background-color: #77c107;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 3rem 0;
+}
+
+.reviews {
+    background-color: rgba(119, 193, 7,.75);
 }
 
 .carousel-container {
     position: relative;
+    background-color: #fff;
+    margin: 2.5rem 0;
 }
 
 .carousel {
@@ -588,6 +604,8 @@ div.selected {
     width: 50%;
     padding: 10px;
     background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .review p {
@@ -599,9 +617,21 @@ div.selected {
     color: #1d1d1d;
 }
 
+.fb {
+    text-align: left;
+    width: 50px;
+    &&:hover {
+        opacity: 70%;
+    }
+    &&:active {
+        opacity: 100%;
+    }
+}
+
 .section-title .color{
     color: #ffffff;
 }
+
 .group {
     display: flex;
     flex-direction: column;
@@ -610,7 +640,6 @@ div.selected {
 .map {
     background-color: #333333;
     display: flex;
-    padding: 2rem;
     color: #333;
     width: 100%;
     color: #fff;
@@ -625,7 +654,6 @@ div.selected {
 
 .section-title h3 {
     text-align: left;
-    padding-left: 2rem;
     color: #fff;
     font-weight: normal;
 }
@@ -662,19 +690,21 @@ a.anchor {
 }
 
 .contact-section {
-    padding: 40px 0;
-    background-color: #979797;
+    background-image: url("img/background2.svg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.contact {
+    background-color: #979797c0;
     text-align: center;
 }
 
-.contact-section h2{
+.contact h2{
     color: #fff;
-}
-
-.contact-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .contact-info {
@@ -687,7 +717,7 @@ a.anchor {
 
 .contact-item {
     flex: 1 1 300px;
-    background: rgb(240, 239, 239);
+    background: #fff;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -739,6 +769,7 @@ form p {
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 100%;
+    background-color: #f5f5f5;
 }
 
 .contact-item button {
@@ -768,6 +799,10 @@ form p {
     color: #555;
 }
 
+iframe {
+    border-radius: 6px;
+}
+
 @media only screen and (max-width: 730px){
     /*Tablets [730 -> below]*/
     .header {
@@ -777,13 +812,14 @@ form p {
         align-items: center;
     }
     .container {
-        padding: 2rem 2rem 2rem;
+        padding: 4rem 2rem 6rem;
     }
     .contact-info {
         background: #fff;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        border-radius: 6px;
     }
     .contact-item {
         flex: 100%;
@@ -795,6 +831,10 @@ form p {
     }
     .media-scroller {
         grid-auto-columns: 40%;
+    }
+
+    .media-wrapper h3 {
+        padding-left: 0;
     }
 
     .section-title h3 {
@@ -813,8 +853,12 @@ form p {
     a.anchor {
         display: block;
         position: relative;
-        top: -121.2px;
+        top: -187.2px;
         visibility: hidden;
+    }
+    .spacer {
+        width: 100%;
+        margin-top: 122.2px;
     }
 }
 @media only screen and (max-width: 605px){
@@ -872,6 +916,10 @@ form p {
             top: -112.2px;
             visibility: hidden;
     }
+    .spacer {
+        width: 100%;
+        margin-top: 112.2px;
+    }
 }
 
 @media only screen and (max-width: 430px){
@@ -893,7 +941,8 @@ form p {
     }
 
     .hero h1 {
-        font-size: 2rem
+        font-size: 2rem;
+        line-height: 2.25rem;
     }
     
     .hero p {
@@ -909,6 +958,10 @@ form p {
         top: -80px;
         visibility: hidden;
     } 
+    .spacer {
+        width: 100%;
+        margin-top: 108.2px;
+    }
 }
 
 @media only screen and (max-width: 340px){
@@ -928,4 +981,8 @@ form p {
         top: -101px;
         visibility: hidden;
     } 
+    .spacer {
+        width: 100%;
+        margin-top: 101px;
+    }
 } 
