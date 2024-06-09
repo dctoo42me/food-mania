@@ -256,7 +256,7 @@ p {
 
 .spacer {
     width: 100%;
-    margin-top: 87.2px;
+    margin-top: 73px;
 }
 
 .hero {
@@ -312,7 +312,7 @@ p {
 }
 
 .media-wrapper h3 {
-    padding-top: 2rem;
+    padding-top: 3rem;
     padding-left: 4rem;
     background-color: rgba(119, 193, 7,.75);
 }
@@ -685,7 +685,7 @@ footer {
 a.anchor {
     display: block;
     position: relative;
-    top: -87.2px;
+    top: -72px;
     visibility: hidden;
 }
 
@@ -853,12 +853,12 @@ iframe {
     a.anchor {
         display: block;
         position: relative;
-        top: -187.2px;
+        top: -108px;
         visibility: hidden;
     }
     .spacer {
         width: 100%;
-        margin-top: 122.2px;
+        margin-top: 108px;
     }
 }
 @media only screen and (max-width: 605px){
@@ -874,10 +874,10 @@ iframe {
     .logo {
     margin-right: 0;
     }
-
+/* 
     .hero {
         margin-top: 110px;
-    }
+    } */
 
     .menu {
         padding: 0;
@@ -913,28 +913,28 @@ iframe {
     a.anchor {
             display: block;
             position: relative;
-            top: -112.2px;
+            top: -98px;
             visibility: hidden;
     }
     .spacer {
         width: 100%;
-        margin-top: 112.2px;
+        margin-top: 98px;
     }
 }
 
 @media only screen and (max-width: 430px){
     /*Small smartphones [430 -> below]*/
     .container{
-        padding: 1rem;
+        padding: 4rem 1rem;
     }
     .logo {
         font-size: 36px;
         padding-bottom: .5rem;
     }
-    
+/*     
     .hero {
         margin-top: 90px;
-    }
+    } */
 
     .hero h2 {
         font-size: 30px;
@@ -955,12 +955,12 @@ iframe {
     a.anchor {
         display: block;
         position: relative;
-        top: -80px;
+        top: -97px;
         visibility: hidden;
     } 
     .spacer {
         width: 100%;
-        margin-top: 108.2px;
+        margin-top: 97px;
     }
 }
 
@@ -978,11 +978,11 @@ iframe {
     a.anchor {
         display: block;
         position: relative;
-        top: -101px;
+        top: -90px;
         visibility: hidden;
     } 
     .spacer {
         width: 100%;
-        margin-top: 101px;
+        margin-top: 90px;
     }
 } 
