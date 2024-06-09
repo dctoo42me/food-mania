@@ -884,11 +884,16 @@ iframe {
     }
     
     .menu-item h3 {
-        font-size: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .menu-title-wrapper {
+        padding: 2rem 1rem 1rem ;
     }
 
     .menu-item .description {
         font-size: 1rem;
+        padding-left: 1rem;
     }
 
     .menu-item p {
