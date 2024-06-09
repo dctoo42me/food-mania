@@ -268,6 +268,7 @@ p {
     background-image: url(img/taquitosPlate2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 0 .5rem;
     background-position: center;
     text-align: center;
     height: 500px;
@@ -874,10 +875,6 @@ iframe {
     .logo {
     margin-right: 0;
     }
-/* 
-    .hero {
-        margin-top: 110px;
-    } */
 
     .menu {
         padding: 0;
@@ -936,10 +933,6 @@ iframe {
         font-size: 36px;
         padding-bottom: .5rem;
     }
-/*     
-    .hero {
-        margin-top: 90px;
-    } */
 
     .hero h2 {
         font-size: 30px;
