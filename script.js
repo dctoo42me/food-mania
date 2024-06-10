@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function toggleMenu() {
-        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('active');
     }
 });
 

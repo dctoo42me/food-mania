@@ -174,9 +174,9 @@ nav {
     }
 }
 
-.mobile-menu.hidden {
+/* .mobile-menu.hidden {
     transform: translateX(100%);
-}
+} */
 
 .close-btn {
     position: absolute;
