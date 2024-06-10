@@ -103,10 +103,6 @@ nav {
     font-weight: 600;
 }
 
-.nav a:hover {
-    color: #a3a3a3;
-}
-
 .main-menu .btn a{
     font-weight: 600;
 }
@@ -128,18 +124,14 @@ nav {
     right: -100%; /* Initially off-screen */
     width: 100%; /* Adjust width as needed */
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-blurred dark background */
+    background-color: rgba(0, 0, 0, 0.91); /* Semi-blurred dark background */
     backdrop-filter: blur(5px); /* Apply blur effect */
     transition: right 0.3s ease; /* Smooth transition */
     z-index: 999; /* Ensure it's above other content */
     padding: 20px;
     padding-top: 20%;
-    color: white;
+    /* color: white; */
     transition: right 0.3s ease, transform 0.3s ease;
-}
-
-.mobile-menu li :active {
-    color: rgb(255, 255, 255);
 }
 
 .mobile-menu.active {
@@ -160,15 +152,26 @@ nav {
     margin-left: 0;
 }
 
-.mobile-menu .btn {
+.mobile-menu a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #959494;
+    &&:hover {
+        color: #fff;
+    }
+    &&:active {
+        color: #959494;
+    }
+}
+
+.mobile-menu a.btn {
     font-weight: 600;
     margin-top: 20px;
     padding: 10px 30px;
-}
-
-.mobile-menu a {
-    text-decoration: none;
     color: #fff;
+    &&:active {
+        color: #fff;
+    }
 }
 
 .mobile-menu.hidden {
@@ -188,7 +191,7 @@ nav {
 }
 
 .close-btn:hover {
-    color: #9393938a;
+    color: #fff;
 }
 
 .btn {
